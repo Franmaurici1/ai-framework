@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, TrendingUp, Rocket } from 'lucide-react';
 import { stagesOverview } from '@/data/stages';
