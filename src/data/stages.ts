@@ -95,7 +95,7 @@ export const stagesOverview: Stage[] = [
   {
     id: 'stage-2',
     number: 2,
-    title: 'Quick-Win Automations & Micro-Apps',
+    title: 'Quick-Win Autos & Micro-Apps',
     tagline: 'Acceleration',
     description:
       'Automate repetitive, time-consuming tasks with simple AI workflows and micro-applications for specific UATP use cases.',

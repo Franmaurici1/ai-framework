@@ -172,7 +172,7 @@ export function DistillGeniePage() {
                       className="text-white text-2xl font-bold"
                       style={{ fontFamily: "'Caveat', cursive" }}
                     >
-                      👆 ✨ This demo was done with AI
+                      👆 ✨ This demo was done with AI too!
                     </p>
                   </div>
                 </motion.div>
@@ -446,16 +446,19 @@ export function DistillGeniePage() {
       </section>
 
       {/* Your Stack Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <Card className="p-12 bg-gradient-to-br from-uatp-navy to-uatp-navy-light text-white text-center">
+      <section className="py-20 bg-gradient-to-br from-uatp-navy to-uatp-navy-light relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6bTAgMjBjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptLTIwIDRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full relative z-10"
+        >
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-12 text-white text-center shadow-2xl">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Your Stack. Your Workflow.
               </h2>
@@ -481,9 +484,9 @@ export function DistillGeniePage() {
                   Snowflake Cortex
                 </span>
               </div>
-            </Card>
-          </motion.div>
-        </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );

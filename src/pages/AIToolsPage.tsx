@@ -64,7 +64,7 @@ const featuredTools: AITool[] = [
   {
     name: 'Claude Code',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Claude_AI_logo.svg',
-    description: 'Specialized AI coding assistant bundled with Claude Premium, tailored for development teams with advanced code generation and architecture capabilities.',
+    description: 'Specialized AI coding assistant bundled with Claude Premium (It includes Claude!), tailored for development teams with advanced code generation and architecture capabilities.',
     bestUsedFor: 'Code generation, refactoring, architecture design, technical documentation, and development workflow automation. Very relevant for UATP\'s engineering teams.',
     departments: [
       { name: 'Engineering', color: 'bg-indigo-100 text-indigo-700' },

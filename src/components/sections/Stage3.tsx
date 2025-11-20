@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Rocket, MessageSquare, BarChart3, Database, Cloud, Bot, ExternalLink } from 'lucide-react';
@@ -8,6 +9,8 @@ const featureIcons = [MessageSquare, BarChart3, Database];
 const toolIcons = [Database, Cloud, Bot];
 
 export function Stage3() {
+  const navigate = useNavigate();
+
   return (
     <section id="stage-3" className="py-24 bg-gradient-to-br from-uatp-navy via-uatp-navy-dark to-uatp-navy-light text-white relative overflow-hidden">
       {/* Background pattern */}
@@ -66,13 +69,24 @@ export function Stage3() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      variant="outline"
-                      className="w-full bg-white/5 text-white border-white/20 hover:bg-white/10 hover:text-white"
-                    >
-                      Check it out
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Button>
+                    {feature.title === 'Enterprise AI Assistant (DistillGenie++)' ? (
+                      <Button
+                        variant="outline"
+                        className="w-full bg-white/5 text-white border-white/20 hover:bg-white/10 hover:text-white"
+                        onClick={() => navigate('/distillgenie')}
+                      >
+                        Check it out
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        className="w-full bg-white/5 text-white border-white/20 hover:bg-white/10 hover:text-white"
+                      >
+                        Let's build it together!
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
