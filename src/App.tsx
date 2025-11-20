@@ -5,33 +5,36 @@ import { BuiltWithAIPage } from '@/pages/BuiltWithAIPage';
 import { DistillGeniePage } from '@/pages/DistillGeniePage';
 import { AIToolsPage } from '@/pages/AIToolsPage';
 import { Author } from '@/components/sections/Author';
+import { PasswordGate } from '@/components/PasswordGate';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/ai-tools" element={<AIToolsPage />} />
-            <Route path="/distillgenie" element={<DistillGeniePage />} />
-            <Route path="/built-with-ai" element={<BuiltWithAIPage />} />
-          </Routes>
-        </main>
-        <Author />
-        <footer className="bg-uatp-navy text-white py-8">
-          <div className="container mx-auto px-4 text-center">
-            <p className="text-gray-300">
-              &copy; {new Date().getFullYear()} UATP. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-400 mt-2">
-              Built with React, TypeScript, Tailwind CSS, and Framer Motion
-            </p>
-          </div>
-        </footer>
-      </div>
-    </Router>
+    <PasswordGate>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/ai-tools" element={<AIToolsPage />} />
+              <Route path="/distillgenie" element={<DistillGeniePage />} />
+              <Route path="/built-with-ai" element={<BuiltWithAIPage />} />
+            </Routes>
+          </main>
+          <Author />
+          <footer className="bg-uatp-navy text-white py-8">
+            <div className="container mx-auto px-4 text-center">
+              <p className="text-gray-300">
+                &copy; {new Date().getFullYear()} UATP. All rights reserved.
+              </p>
+              <p className="text-sm text-gray-400 mt-2">
+                Built with React, TypeScript, Tailwind CSS, and Framer Motion
+              </p>
+            </div>
+          </footer>
+        </div>
+      </Router>
+    </PasswordGate>
   );
 }
 
