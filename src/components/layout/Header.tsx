@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, X, Menu } from 'lucide-react';
 
 const navigationLinks = [
   { label: 'Home', href: '/', showArrow: false, isRoute: true },
@@ -12,6 +12,7 @@ const navigationLinks = [
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -128,23 +129,69 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden p-2">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-uatp-navy hover:text-uatp-teal transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden overflow-hidden bg-white border-t border-gray-200"
+          >
+            <nav className="container mx-auto px-4 py-4 space-y-2">
+              {navigationLinks.map((link) => (
+                <div key={link.href}>
+                  {link.isButton ? (
+                    <button
+                      onClick={() => {
+                        navigate(link.href);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-3 text-sm font-medium text-white bg-uatp-teal hover:bg-teal-600 transition-colors rounded-md"
+                    >
+                      {link.label}
+                    </button>
+                  ) : link.isRoute ? (
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-uatp-teal hover:bg-gray-50 transition-colors rounded-md"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      onClick={(e) => {
+                        scrollToSection(e, link.href);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-uatp-teal hover:bg-gray-50 transition-colors rounded-md"
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
