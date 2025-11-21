@@ -175,7 +175,7 @@ export const stage1Tools: Tool[] = [
 export const stage2Examples: AutomationExample[] = [
   {
     title: 'Code → Documentation generator',
-    description: 'Generate technical documentation about any project and features',
+    description: 'Generate technical documentation about any project and features with just a few clicks',
   },
   {
     title: 'Figma + Documentation → POC creation system',
@@ -183,7 +183,7 @@ export const stage2Examples: AutomationExample[] = [
   },
   {
     title: 'Meeting Transcript → Summary + Tasks',
-    description: 'Generate meeting summaries and action items from transcripts, auto-assign in Jira',
+    description: 'Generate meeting summaries and action items from transcripts, even create tasks in Jira',
   },
   {
     title: 'Micro GPTs for UATP Domains',
