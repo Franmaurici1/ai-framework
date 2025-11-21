@@ -46,37 +46,37 @@ export interface Stage3Feature {
 // Challenges data
 export const challenges: Challenge[] = [
   {
-    id: 'many-projects',
-    title: 'Too Many Projects & Vendors',
-    description: 'Multiple AI initiatives across departments without coordination',
+    id: 'assess',
+    title: 'Assess',
+    description: 'Identify high-impact opportunities that maximize ROI with minimal effort',
     bullets: [
-      'Redundant AI tools and overlapping vendor contracts',
-      'No centralized visibility into what AI is being used where',
-      'Budget inefficiencies from duplicate investments',
+      'Evaluate current processes to find time-consuming, repetitive tasks',
+      'Prioritize initiatives based on business value and implementation complexity',
+      'Measure baseline metrics to establish clear success criteria',
     ],
-    icon: 'layers',
+    icon: 'target',
   },
   {
-    id: 'fragmented-tools',
-    title: 'Fragmented Tools & Data',
-    description: 'Disconnected systems leading to information silos',
+    id: 'plan',
+    title: 'Plan',
+    description: 'Design strategic implementation paths with clear roadmaps and resource allocation',
     bullets: [
-      'AI tools not integrated with core systems (Jira, Confluence, Slack)',
-      'Data scattered across platforms without governance',
-      'Manual work bridging gaps between systems',
+      'Create detailed action plans with defined milestones and deliverables',
+      'Allocate resources effectively across people, tools, and timeline',
+      'Identify potential risks and develop mitigation strategies',
     ],
-    icon: 'puzzle',
+    icon: 'file-text',
   },
   {
-    id: 'unstructured-ai',
-    title: 'Unstructured AI Experimentation',
-    description: 'Ad-hoc AI adoption without strategic framework',
+    id: 'execute',
+    title: 'Execute',
+    description: 'Deliver measurable results through systematic implementation and continuous improvement',
     bullets: [
-      'Teams experimenting without security or compliance review',
-      'No clear ROI measurement or success criteria',
-      'Risk of data leaks and regulatory issues',
+      'Implement solutions with precision following the established plan',
+      'Monitor progress with real-time metrics and KPIs',
+      'Iterate and optimize based on feedback and performance data',
     ],
-    icon: 'alert-triangle',
+    icon: 'rocket',
   },
 ];
 
@@ -126,7 +126,7 @@ export const stage1DepartmentTools: DepartmentTool[] = [
   {
     department: 'Leadership & Strategy',
     tools: [
-      { name: 'GPT-4.1 (ChatGPT Team)', reason: 'Best for strategic analysis, document drafting, meeting prep' },
+      { name: 'GPT-5.1 (ChatGPT Team)', reason: 'Best for strategic analysis, document drafting, meeting prep' },
       { name: 'Claude Sonnet', reason: 'Superior for long-form analysis, research synthesis' },
     ],
   },
@@ -134,14 +134,14 @@ export const stage1DepartmentTools: DepartmentTool[] = [
     department: 'Operations & Finance',
     tools: [
       { name: 'Copilot for M365', reason: 'Native integration with Excel, Outlook, Teams, PowerPoint' },
-      { name: 'GPT-4.1', reason: 'Financial modeling, data interpretation, report generation' },
+      { name: 'GPT-5.1', reason: 'Financial modeling, data interpretation, report generation' },
     ],
   },
   {
     department: 'Product & Design',
     tools: [
       { name: 'Claude Code', reason: 'Best for product requirements, technical documentation' },
-      { name: 'GPT-4.1', reason: 'User research analysis, copywriting, content strategy' },
+      { name: 'GPT-5.1', reason: 'User research analysis, copywriting, content strategy' },
     ],
   },
   {
@@ -160,7 +160,7 @@ export const stage1Tools: Tool[] = [
     description: 'Best for Outlook/Teams/Excel workflows',
   },
   {
-    name: 'GPT-4.1 (Team)',
+    name: 'GPT-5.1 (Team)',
     priceRange: '$20-$30/user/month',
     description: 'Best general reasoning & writing',
   },
@@ -174,12 +174,12 @@ export const stage1Tools: Tool[] = [
 // Stage 2 Details
 export const stage2Examples: AutomationExample[] = [
   {
-    title: 'Email → Confluence Auto-Summarizer',
-    description: 'Automatically summarize important emails and push summaries to Confluence pages',
+    title: 'Code → Documentation generator',
+    description: 'Generate technical documentation about any project and features',
   },
   {
-    title: 'Slack → Jira Ticket Creator',
-    description: 'Convert Slack threads into structured Jira tickets with AI extraction',
+    title: 'Figma + Documentation → POC creation system',
+    description: 'Create visual POCs with minimum effort to evaluate viability and UI/UX',
   },
   {
     title: 'Meeting Transcript → Summary + Tasks',
@@ -272,7 +272,7 @@ export interface PricingSummary {
 export const pricingSummaryData: PricingSummary[] = [
   {
     stage: 'Stage 1: Market Tools',
-    coreTools: ['GPT-4.1 Team', 'Claude Sonnet', 'Copilot M365', 'GitHub Copilot/Cursor'],
+    coreTools: ['GPT-5.1 Team', 'Claude Sonnet', 'Copilot M365', 'GitHub Copilot/Cursor'],
     priceRange: '$20-$60/user/month',
     whyRecommended:
       'Fastest ROI, minimal implementation risk, immediate productivity gains across all departments',

@@ -86,31 +86,47 @@ export function Stage2() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-3">
-                  {/* Mock chat interface */}
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <p className="text-sm font-medium mb-1">User:</p>
-                    <p className="text-sm">What are the key requirements for AFP Level 3 certification?</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-4">
+                  {/* Mock chat interface with message bubbles */}
+
+                  {/* User message - aligned right */}
+                  <div className="flex justify-end">
+                    <div className="relative bg-gray-100 text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-sm after:content-[''] after:absolute after:top-3 after:-right-2 after:w-0 after:h-0 after:border-t-[8px] after:border-t-transparent after:border-l-[10px] after:border-l-gray-100 after:border-b-[8px] after:border-b-transparent">
+                      <p className="text-sm font-medium mb-1">User</p>
+                      <p className="text-sm">What are the key requirements for AFP Level 3 certification?</p>
+                    </div>
                   </div>
-                  <div className="bg-white/30 rounded-lg p-3">
-                    <p className="text-sm font-medium mb-1">AFP Helper:</p>
-                    <p className="text-sm">
-                      Based on UATP's AFP documentation, Level 3 certification requires:
-                      <br />• Annual transaction volume &gt; $10M
-                      <br />• PCI DSS compliance certification
-                      <br />• Dedicated settlement account
-                      <br />• 24/7 technical support capability
-                    </p>
+
+                  {/* Bot message - aligned left */}
+                  <div className="flex justify-start">
+                    <div className="relative bg-white text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-md before:content-[''] before:absolute before:top-3 before:-left-2 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[10px] before:border-r-white before:border-b-[8px] before:border-b-transparent">
+                      <p className="text-sm font-medium mb-1 text-uatp-teal">AFP Helper</p>
+                      <p className="text-sm">
+                        Based on UATP's AFP documentation, Level 3 certification requires:
+                        <br />• Annual transaction volume &gt; $10M
+                        <br />• PCI DSS compliance certification
+                        <br />• Dedicated settlement account
+                        <br />• 24/7 technical support capability
+                      </p>
+                    </div>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-3">
-                    <p className="text-sm font-medium mb-1">User:</p>
-                    <p className="text-sm">Where can I find the full documentation?</p>
+
+                  {/* User message - aligned right */}
+                  <div className="flex justify-end">
+                    <div className="relative bg-gray-100 text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-sm after:content-[''] after:absolute after:top-3 after:-right-2 after:w-0 after:h-0 after:border-t-[8px] after:border-t-transparent after:border-l-[10px] after:border-l-gray-100 after:border-b-[8px] after:border-b-transparent">
+                      <p className="text-sm font-medium mb-1">User</p>
+                      <p className="text-sm">Where can I find the full documentation?</p>
+                    </div>
                   </div>
-                  <div className="bg-white/30 rounded-lg p-3">
-                    <p className="text-sm font-medium mb-1">AFP Helper:</p>
-                    <p className="text-sm">
-                      You can find the complete AFP Level 3 documentation in Confluence: AFP Certification Guide (link)
-                    </p>
+
+                  {/* Bot message - aligned left */}
+                  <div className="flex justify-start">
+                    <div className="relative bg-white text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-md before:content-[''] before:absolute before:top-3 before:-left-2 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[10px] before:border-r-white before:border-b-[8px] before:border-b-transparent">
+                      <p className="text-sm font-medium mb-1 text-uatp-teal">AFP Helper</p>
+                      <p className="text-sm">
+                        You can find the complete AFP Level 3 documentation in Confluence: AFP Certification Guide (link)
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="mt-4 text-center">

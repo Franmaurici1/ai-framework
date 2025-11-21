@@ -4,7 +4,6 @@ import {
   MessageSquare,
   Code,
   Brain,
-  Search,
   FileText,
   Terminal,
   Users,
@@ -15,7 +14,8 @@ import {
   Mail,
   Video,
   Palette,
-  Image
+  Image,
+  ExternalLink
 } from 'lucide-react';
 
 interface Department {
@@ -33,6 +33,7 @@ interface AITool {
   features: string[];
   icon: React.ComponentType<any>;
   gradient: string;
+  pricingUrl: string;
 }
 
 // Featured tools (larger display)
@@ -60,6 +61,7 @@ const featuredTools: AITool[] = [
     ],
     icon: MessageSquare,
     gradient: 'from-emerald-500 to-teal-600',
+    pricingUrl: 'https://chatgpt.com/pricing/',
   },
   {
     name: 'Claude Code',
@@ -82,6 +84,7 @@ const featuredTools: AITool[] = [
     ],
     icon: Terminal,
     gradient: 'from-orange-600 to-amber-700',
+    pricingUrl: 'https://www.claude.com/pricing',
   },
 ];
 
@@ -109,6 +112,7 @@ const aiTools: AITool[] = [
     ],
     icon: Mail,
     gradient: 'from-blue-600 to-blue-800',
+    pricingUrl: 'https://www.microsoft.com/en-us/microsoft-365-copilot/pricing',
   },
   {
     name: 'Claude',
@@ -132,29 +136,31 @@ const aiTools: AITool[] = [
     ],
     icon: Brain,
     gradient: 'from-orange-500 to-red-600',
+    pricingUrl: 'https://www.claude.com/pricing',
   },
   {
-    name: 'Perplexity Enterprise',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Perplexity_AI_logo.svg',
-    description: 'AI-powered research platform with advanced search, data-driven Q&A, and knowledge retrieval across internal and external sources.',
-    bestUsedFor: 'Research with citations, competitive intelligence, market analysis, knowledge discovery, and data-driven decision making. Excellent for product and strategy teams.',
+    name: 'Zoom AI Companion',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Zoom_Communications_Logo.svg',
+    description: 'AI-powered meeting assistant that automatically summarizes meetings, generates action items, and distributes key takeaways to stakeholders.',
+    bestUsedFor: 'Meeting summaries and action points. Auto-summarizing meetings, creating action items, and distributing to stakeholders.',
     departments: [
+      { name: 'All Departments', color: 'bg-slate-100 text-slate-700' },
+      { name: 'Executive', color: 'bg-amber-100 text-amber-700' },
       { name: 'Product', color: 'bg-orange-100 text-orange-700' },
-      { name: 'Strategy', color: 'bg-indigo-100 text-indigo-700' },
-      { name: 'Research', color: 'bg-yellow-100 text-yellow-700' },
-      { name: 'Marketing', color: 'bg-purple-100 text-purple-700' },
+      { name: 'Operations', color: 'bg-teal-100 text-teal-700' },
       { name: 'Sales', color: 'bg-pink-100 text-pink-700' },
     ],
-    enterprisePrice: '~$40-$325/user/month',
+    enterprisePrice: '~$10-$20/user/month',
     features: [
-      'Enterprise Pro: ~$40/user/month ($400/year)',
-      'Enterprise Max: ~$325/user/month ($3,250/year)',
-      'Internal + external knowledge retrieval',
-      'Advanced search and citation features',
-      'Ideal for research-driven teams',
+      'Typically included in Zoom Workplace/Enterprise licenses',
+      'AI Companion Add-on: ~$10–$20/user/month (varies by region)',
+      'Auto-generated meeting summaries',
+      'Action items and next steps extraction',
+      'Stakeholder distribution and follow-up',
     ],
-    icon: Search,
-    gradient: 'from-blue-500 to-cyan-600',
+    icon: Video,
+    gradient: 'from-blue-500 to-blue-700',
+    pricingUrl: 'https://zoom.us/pricing',
   },
   {
     name: 'Confluence Cloud + AI',
@@ -178,6 +184,7 @@ const aiTools: AITool[] = [
     ],
     icon: FileText,
     gradient: 'from-blue-600 to-indigo-700',
+    pricingUrl: 'https://www.atlassian.com/software/confluence/pricing',
   },
   {
     name: 'Supademo',
@@ -201,12 +208,13 @@ const aiTools: AITool[] = [
     ],
     icon: Video,
     gradient: 'from-violet-500 to-purple-600',
+    pricingUrl: 'https://supademo.com/pricing',
   },
   {
     name: 'Cursor',
     logoUrl: 'https://avatars.githubusercontent.com/u/142287834',
     description: 'Full AI-powered coding environment with multi-model support (GPT, Claude) designed for modern development teams and workflows.',
-    bestUsedFor: 'Complete AI coding environment, multi-model development assistance, code generation, and team collaboration. Perfect for multi-vendor dev teams at UATP.',
+    bestUsedFor: 'Complete AI coding environment, multi-model development assistance, code generation, and team collaboration. Perfect for multi-vendor dev teams',
     departments: [
       { name: 'Engineering', color: 'bg-indigo-100 text-indigo-700' },
       { name: 'Development', color: 'bg-blue-100 text-blue-700' },
@@ -223,6 +231,7 @@ const aiTools: AITool[] = [
     ],
     icon: Code,
     gradient: 'from-slate-700 to-gray-900',
+    pricingUrl: 'https://cursor.com/pricing',
   },
   {
     name: 'Figma + Figma AI',
@@ -245,6 +254,7 @@ const aiTools: AITool[] = [
     ],
     icon: Palette,
     gradient: 'from-pink-500 to-rose-600',
+    pricingUrl: 'https://www.figma.com/pricing/',
   },
   {
     name: 'Midjourney',
@@ -268,6 +278,7 @@ const aiTools: AITool[] = [
     ],
     icon: Image,
     gradient: 'from-indigo-500 to-purple-600',
+    pricingUrl: 'https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans',
   },
 ];
 
@@ -346,7 +357,7 @@ export function AIToolsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-10 h-full hover:shadow-2xl transition-all duration-300 border-2 border-uatp-teal/30 hover:border-uatp-teal bg-gradient-to-br from-white to-gray-50">
+                <Card className="p-10 h-full hover:shadow-2xl transition-all duration-300 border-2 border-uatp-teal/30 hover:border-uatp-teal bg-gradient-to-br from-white to-gray-50 flex flex-col">
                   {/* Tool Header */}
                   <div className="flex items-start gap-6 mb-6">
                     {/* Logo */}
@@ -419,7 +430,7 @@ export function AIToolsPage() {
                   </div>
 
                   {/* Enterprise Features */}
-                  <div>
+                  <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Shield className="w-5 h-5 text-uatp-teal" />
                       <h4 className="font-semibold text-uatp-navy">Enterprise Features</h4>
@@ -432,6 +443,19 @@ export function AIToolsPage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Learn More Button */}
+                  <div className="mt-auto pt-4">
+                    <a
+                      href={tool.pricingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border-2 border-uatp-teal text-uatp-teal hover:bg-uatp-teal/5 font-medium rounded-lg transition-all duration-200"
+                    >
+                      Learn more
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   </div>
                 </Card>
               </motion.div>
@@ -448,7 +472,7 @@ export function AIToolsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-uatp-teal">
+                <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-uatp-teal flex flex-col">
                   {/* Tool Header */}
                   <div className="flex items-start gap-4 mb-5">
                     {/* Logo */}
@@ -519,7 +543,7 @@ export function AIToolsPage() {
                   </div>
 
                   {/* Enterprise Features */}
-                  <div>
+                  <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Shield className="w-5 h-5 text-uatp-teal" />
                       <h4 className="font-semibold text-uatp-navy">Enterprise Features</h4>
@@ -532,6 +556,19 @@ export function AIToolsPage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Learn More Button */}
+                  <div className="mt-auto pt-4">
+                    <a
+                      href={tool.pricingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border-2 border-uatp-teal text-uatp-teal hover:bg-uatp-teal/5 font-medium rounded-lg transition-all duration-200"
+                    >
+                      Learn more
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   </div>
                 </Card>
               </motion.div>

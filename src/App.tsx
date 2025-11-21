@@ -25,10 +25,10 @@ function App() {
           <footer className="bg-uatp-navy text-white py-8">
             <div className="container mx-auto px-4 text-center">
               <p className="text-gray-300">
-                &copy; {new Date().getFullYear()} UATP. All rights reserved.
+                &copy; {new Date().getFullYear()} Distillery. All rights reserved.
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                Built with React, TypeScript, Tailwind CSS, and Framer Motion
+                Built with React, TypeScript, Tailwind CSS, and Framer Motion by Francisco Maurici
               </p>
             </div>
           </footer>

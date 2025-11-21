@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Layers, Puzzle, AlertTriangle } from 'lucide-react';
+import { Target, FileText, Rocket } from 'lucide-react';
 import { challenges } from '@/data/stages';
 
 const iconMap = {
-  layers: Layers,
-  puzzle: Puzzle,
-  'alert-triangle': AlertTriangle,
+  target: Target,
+  'file-text': FileText,
+  rocket: Rocket,
 };
 
 export function Challenge() {
@@ -22,10 +22,10 @@ export function Challenge() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-4">
-            Why UATP Needs a Structured AI Framework
+            The Three-Step Methodology Driving AI Success
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Without a clear framework, AI adoption becomes fragmented, costly, and risky
+            For each stage, we <span className="font-semibold text-uatp-teal">Assess</span> high-impact opportunities, <span className="font-semibold text-uatp-teal">Plan</span> strategic implementation paths, and <span className="font-semibold text-uatp-teal">Execute</span> to deliver measurable ROI—ensuring every AI investment creates real business value
           </p>
         </motion.div>
 
