@@ -93,7 +93,7 @@ export function Stage2() {
                   <div className="flex justify-end">
                     <div className="relative bg-gray-100 text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-sm after:content-[''] after:absolute after:top-3 after:-right-2 after:w-0 after:h-0 after:border-t-[8px] after:border-t-transparent after:border-l-[10px] after:border-l-gray-100 after:border-b-[8px] after:border-b-transparent">
                       <p className="text-sm font-medium mb-1">User</p>
-                      <p className="text-sm">What are the key requirements for AFP Level 3 certification?</p>
+                      <p className="text-sm">What exactly counts as an AFP in UATP's payment offering?</p>
                     </div>
                   </div>
 
@@ -102,11 +102,7 @@ export function Stage2() {
                     <div className="relative bg-white text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-md before:content-[''] before:absolute before:top-3 before:-left-2 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[10px] before:border-r-white before:border-b-[8px] before:border-b-transparent">
                       <p className="text-sm font-medium mb-1 text-uatp-teal">AFP Helper</p>
                       <p className="text-sm">
-                        Based on UATP's AFP documentation, Level 3 certification requires:
-                        <br />• Annual transaction volume &gt; $10M
-                        <br />• PCI DSS compliance certification
-                        <br />• Dedicated settlement account
-                        <br />• 24/7 technical support capability
+                        AFP stands for Alternative Forms of Payment. For UATP, this includes digital wallets, regional/local bank transfers, real-time payment methods, and other non-credit-card options that airlines can offer to increase global reach and conversion.
                       </p>
                     </div>
                   </div>
@@ -115,7 +111,7 @@ export function Stage2() {
                   <div className="flex justify-end">
                     <div className="relative bg-gray-100 text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-sm after:content-[''] after:absolute after:top-3 after:-right-2 after:w-0 after:h-0 after:border-t-[8px] after:border-t-transparent after:border-l-[10px] after:border-l-gray-100 after:border-b-[8px] after:border-b-transparent">
                       <p className="text-sm font-medium mb-1">User</p>
-                      <p className="text-sm">Where can I find the full documentation?</p>
+                      <p className="text-sm">And how does adding AFPs actually help an airline?</p>
                     </div>
                   </div>
 
@@ -124,14 +120,14 @@ export function Stage2() {
                     <div className="relative bg-white text-gray-800 rounded-2xl p-3 max-w-[85%] shadow-md before:content-[''] before:absolute before:top-3 before:-left-2 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[10px] before:border-r-white before:border-b-[8px] before:border-b-transparent">
                       <p className="text-sm font-medium mb-1 text-uatp-teal">AFP Helper</p>
                       <p className="text-sm">
-                        You can find the complete AFP Level 3 documentation in Confluence: AFP Certification Guide (link)
+                      AFPs boost conversion and market reach by letting airlines offer local, preferred payment methods—reducing checkout drop-off and capturing customers who don’t use traditional cards.
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-4 text-center">
                   <p className="text-sm opacity-90">
-                    UI Placeholder – Micro GPT for UATP domain knowledge
+                    Micro GPT for UATP domain knowledge
                   </p>
                 </div>
               </CardContent>
