@@ -235,9 +235,10 @@ export const stage3Features: Stage3Feature[] = [
     title: 'Product & Revenue Intelligence',
     description: 'AI-driven analytics over governed UATP data',
     bullets: [
-      'Natural language queries over AtScale/Databricks data models',
-      'Automated anomaly detection and root cause analysis',
-      'Role-based access with PCI/PII protection and audit trails',
+      'Using plain english to get information about how your products work',
+      'Where are you having the most revenue?',
+      'Where are you having the most compains?',
+      'Insights that can help desicion making',
     ],
     imagePlaceholder: 'Revenue analytics dashboard with AI-generated insights',
   },

@@ -28,7 +28,7 @@ function App() {
                 &copy; {new Date().getFullYear()} Distillery. All rights reserved.
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                Built with React, TypeScript, Tailwind CSS, and Framer Motion by Francisco Maurici
+                Built with GPT 5.1, Claude Code, Cursor and other AI tools by Francisco Maurici
               </p>
             </div>
           </footer>

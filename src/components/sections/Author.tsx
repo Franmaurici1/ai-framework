@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Linkedin, Mail } from 'lucide-react';
+import { Globe, Mail } from 'lucide-react';
 
 export function Author() {
   return (
@@ -84,8 +84,8 @@ export function Author() {
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 px-4 py-2 bg-uatp-navy text-white rounded-lg hover:bg-uatp-navy-dark transition-colors"
                       >
-                        <Linkedin className="w-5 h-5" />
-                        <span className="text-sm font-medium">Connect on LinkedIn</span>
+                        <Globe className="w-5 h-5" />
+                        <span className="text-sm font-medium">Distillery web site</span>
                       </a>
                       <a
                         href="mailto:francisco.maurici@distillery.com"
