@@ -134,10 +134,10 @@ export function BuildWithAI() {
             <span>AI-Powered Development</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Built in 3 Hours with AI
+            Built in 4 Hours with AI
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            This entire website—from research to deployment—was created in just 3 hours using cutting-edge AI tools. Here's how artificial intelligence transformed weeks of work into hours.
+            This entire website—from research to deployment—was created in just 4 hours using cutting-edge AI tools. Here's how artificial intelligence transformed weeks of work into hours.
           </p>
         </motion.div>
 
@@ -153,7 +153,7 @@ export function BuildWithAI() {
             <div className="flex items-center space-x-4">
               <Clock className="w-12 h-12 text-white" />
               <div>
-                <div className="text-5xl font-bold text-white">3 Hours</div>
+                <div className="text-5xl font-bold text-white">4 Hours</div>
                 <div className="text-sm text-white/80">From Concept to Completion</div>
               </div>
             </div>
@@ -373,6 +373,126 @@ export function BuildWithAI() {
           </Card>
         </motion.div>
 
+        {/* Why 4 Hours Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <Card className="bg-gradient-to-br from-uatp-navy to-gray-900 border-uatp-teal/30 backdrop-blur-lg overflow-hidden">
+            <CardContent className="p-10">
+              <div className="text-center mb-8">
+                <Target className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                  Why This Entire Site Was Built in Just 4 Hours
+                </h3>
+                <p className="text-xl text-gray-200 max-w-5xl mx-auto leading-relaxed mb-6">
+                  The speed at which this site was created is not an accident, and it's not simply "because of AI." It is the result of hundreds of hours of prior work: testing tools, researching models, configuring workflows, building automations, refining prompts, and understanding how each AI system behaves in real production environments.
+                </p>
+
+                {/* Divider Line */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-full max-w-xs h-[2px] bg-gradient-to-r from-transparent via-uatp-teal to-transparent"></div>
+                </div>
+
+                <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  Over the last year I've invested significant time into understanding and mastering these critical areas:
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-5xl mx-auto">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Researching the best AI tools for each type of work, understanding their strengths, limitations, and hidden capabilities
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Configuring environments like Cursor, Claude Code, OpenAI Assistants, and Slack bots for optimal performance
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Building reusable templates, automations, and internal design systems that accelerate every new project
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Learning how to integrate AI effectively into software, product, and operational workflows
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="max-w-4xl mx-auto mb-8">
+                <p className="text-xl text-white text-center font-semibold mb-6">
+                  That accumulated expertise is what allows me to move at this level of velocity.
+                </p>
+              </div>
+
+              <div className="bg-white/5 rounded-xl p-8 border border-white/10 max-w-5xl mx-auto mb-8">
+                <p className="text-xl text-white leading-relaxed text-center mb-6">
+                  AI can dramatically accelerate output — but not instantly.
+                </p>
+                <p className="text-gray-200 leading-relaxed mb-4">
+                  There is a learning curve, there are configuration steps, and real impact requires:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Knowing which tool is right for which task
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Guide AI through prompts, patterns, and constraints
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Building the right scaffolding and system design around the AI
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
+                    <p className="text-gray-200 leading-relaxed">
+                      Avoiding the pitfalls that slow down teams
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-center mt-6 text-lg">
+                  You don't get this speed by "just plugging AI into the company." You get it through the combination of <strong className="text-white">AI + experience + the right guidance.</strong>
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-uatp-teal/20 to-uatp-green/20 rounded-xl p-8 border border-uatp-teal/30 max-w-5xl mx-auto">
+                <p className="text-xl text-white leading-relaxed mb-4">
+                  <strong>This is the value Distillery brings:</strong> the ability to interpret what the business needs, choose the right tools, configure them effectively, and build systems that turn AI into a multiplier — not a distraction.
+                </p>
+                <p className="text-lg text-gray-200 leading-relaxed">
+                  That's why this site took 4 hours instead of 40+. And that's exactly the kind of acceleration UATP can unlock with the right framework and expertise behind it.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* Bottom Message */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -388,7 +508,7 @@ export function BuildWithAI() {
                 The Future of Development is Here
               </h4>
               <p className="text-white text-lg leading-relaxed mb-4">
-                What traditionally would take weeks of planning, design, and development was accomplished in just 3 hours by leveraging AI as a collaborative partner. This is not just a demo—it's proof that AI can accelerate your team's productivity while maintaining quality and precision.
+                What traditionally would take weeks of planning, design, and development was accomplished in just 4 hours by leveraging AI as a collaborative partner. This is not just a demo—it's proof that AI can accelerate your team's productivity while maintaining quality and precision.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Every aspect—from component architecture to styling choices—reflects industry best practices and enterprise-grade standards. The result is a scalable, maintainable, and production-ready application that demonstrates the transformative power of AI-assisted development.
