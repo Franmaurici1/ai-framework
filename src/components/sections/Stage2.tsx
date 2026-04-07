@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Zap, Bot, MessageSquare, Sparkles, GitBranch } from 'lucide-react';
+import { Bot, MessageSquare, Sparkles, GitBranch, Zap, ArrowRight } from 'lucide-react';
 import { stage2Examples, stage2Tools } from '@/data/stages';
 
-const toolIcons = [MessageSquare, Sparkles, GitBranch];
+const exampleIcons = [Sparkles, Bot, Zap, MessageSquare, Sparkles, GitBranch];
 
 export function Stage2() {
   return (
@@ -15,163 +15,206 @@ export function Stage2() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-16"
         >
           <div className="inline-block px-3 py-1.5 border border-[#D8D8DB] bg-white text-[#535457] rounded-[4px] text-xs font-semibold mb-4 tracking-widest uppercase">
             Stage 2 — Acceleration
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
-            Automate Simple, Time-Consuming Work
-          </h2>
-          <p className="text-lg text-[#535457] max-w-3xl">
-            Focus on quick wins and simple automations that eliminate repetitive tasks. Build micro-applications tailored to specific workflows and use cases.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
+                Automate Simple,<br />Time-Consuming Work
+              </h2>
+              <p className="text-lg text-[#535457] leading-relaxed">
+                Deploy a cross-company AI framework that eliminates repetitive work and puts intelligence at the heart of every department — powered by <strong className="text-[#010205]">Claude Cowork</strong>.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              {['Content', 'Onboarding', 'Decision Intel', 'Brand Voice', 'Meetings', 'Customer Signals'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 border border-[#D8D8DB] bg-white text-[#535457] text-xs rounded-[4px] font-medium tracking-wide">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
-        {/* Two-Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Left: Automation Examples */}
+        {/* Automation Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+          {stage2Examples.map((example, index) => {
+            const Icon = exampleIcons[index];
+            const isHighlight = index === 0 || index === 1 || index === 2;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
+                <Card className={`h-full border rounded-[12px] shadow-none transition-colors duration-250 ${
+                  isHighlight
+                    ? 'bg-white border-[#D8D8DB] hover:border-[#010205]'
+                    : 'bg-white border-[#D8D8DB] hover:border-[#010205]'
+                }`}>
+                  <CardContent className="p-6">
+                    <div className={`w-10 h-10 rounded-[8px] flex items-center justify-center mb-4 ${
+                      index === 0 ? 'bg-[#EBD698]/15 border border-[#EBD698]/40' :
+                      index === 1 ? 'bg-[#010205] ' :
+                      'bg-[#EEEFF2] border border-[#D8D8DB]'
+                    }`}>
+                      <Icon className={`w-5 h-5 ${
+                        index === 0 ? 'text-[#EBD698]' :
+                        index === 1 ? 'text-[#FBFCFF]' :
+                        'text-[#535457]'
+                      }`} />
+                    </div>
+                    <h4 className="font-bold text-[#010205] mb-2 font-barlow uppercase tracking-wide text-sm leading-snug">
+                      {example.title}
+                    </h4>
+                    <p className="text-sm text-[#535457] leading-relaxed">
+                      {example.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Demo Bot + Tools Row */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left: Demo Bot */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="h-full border border-[#D8D8DB] bg-white rounded-[12px] shadow-none">
-              <CardHeader>
-                <CardTitle className="text-xl text-[#010205] flex items-center font-barlow uppercase tracking-wide">
-                  <Zap className="w-5 h-5 text-[#010205] mr-2" />
-                  Quick-Win Automation Examples
+            <Card className="h-full bg-[#0E0E12] border border-[#404044] rounded-[12px] shadow-none">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base flex items-center text-[#FBFCFF] font-barlow uppercase tracking-wide">
+                  <Bot className="w-4 h-4 mr-2 text-[#EBD698]" />
+                  Porsche Design Internal Assistant
                 </CardTitle>
+                <p className="text-xs text-[#88898C] uppercase tracking-widest">Powered by Claude Cowork</p>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4">
-                  {stage2Examples.map((example, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="border-l-2 border-[#D8D8DB] pl-4 py-2"
-                    >
-                      <h4 className="font-semibold text-[#010205] mb-1 text-sm">
-                        {example.title}
-                      </h4>
-                      <p className="text-sm text-[#535457] leading-relaxed">{example.description}</p>
-                    </motion.li>
-                  ))}
-                </ul>
-                <div className="mt-6 p-4 bg-[#EEEFF2] rounded-[4px] border border-[#D8D8DB]">
-                  <p className="text-sm text-[#535457]">
-                    <strong className="text-[#010205]">Assessment criteria:</strong> Prioritize processes based on time consumption, repetition frequency, and potential ROI.
-                  </p>
+                <div className="bg-[#212225] rounded-[8px] p-4 space-y-4 border border-[#404044]">
+
+                  {/* User message */}
+                  <div className="flex justify-end">
+                    <div className="bg-[#292934] text-[#FBFCFF] rounded-[8px] rounded-tr-[2px] p-3 max-w-[85%] border border-[#404044]">
+                      <p className="text-xs font-semibold mb-1 text-[#88898C] uppercase tracking-wide">Marketing</p>
+                      <p className="text-sm">We're launching the new Chronograph collection next week. Can you kick off the content pipeline?</p>
+                    </div>
+                  </div>
+
+                  {/* Bot response */}
+                  <div className="flex justify-start">
+                    <div className="bg-[#0E0E12] text-[#FBFCFF] rounded-[8px] rounded-tl-[2px] p-3 max-w-[85%] border border-[#EBD698]/20">
+                      <p className="text-xs font-semibold mb-2 text-[#EBD698] uppercase tracking-wide">Porsche Design AI</p>
+                      <p className="text-sm text-[#AFB0B3] mb-2">On it. Generating for the Chronograph launch:</p>
+                      <ul className="text-sm text-[#AFB0B3] space-y-1">
+                        <li className="flex items-start gap-2"><span className="text-[#EBD698] mt-0.5">—</span>Product description (EN, DE, FR, JP)</li>
+                        <li className="flex items-start gap-2"><span className="text-[#EBD698] mt-0.5">—</span>Press release draft</li>
+                        <li className="flex items-start gap-2"><span className="text-[#EBD698] mt-0.5">—</span>Instagram + LinkedIn captions</li>
+                        <li className="flex items-start gap-2"><span className="text-[#EBD698] mt-0.5">—</span>Retailer email campaign</li>
+                      </ul>
+                      <p className="text-xs text-[#88898C] mt-2">Ready for review in your shared workspace.</p>
+                    </div>
+                  </div>
+
+                  {/* User follow-up */}
+                  <div className="flex justify-end">
+                    <div className="bg-[#292934] text-[#FBFCFF] rounded-[8px] rounded-tr-[2px] p-3 max-w-[85%] border border-[#404044]">
+                      <p className="text-xs font-semibold mb-1 text-[#88898C] uppercase tracking-wide">Sales</p>
+                      <p className="text-sm">What's our current pricing strategy for the Asia-Pacific region?</p>
+                    </div>
+                  </div>
+
+                  {/* Bot response 2 */}
+                  <div className="flex justify-start">
+                    <div className="bg-[#0E0E12] text-[#FBFCFF] rounded-[8px] rounded-tl-[2px] p-3 max-w-[85%] border border-[#EBD698]/20">
+                      <p className="text-xs font-semibold mb-2 text-[#EBD698] uppercase tracking-wide">Porsche Design AI</p>
+                      <p className="text-sm text-[#AFB0B3]">Based on the latest pricing docs and regional sales data: APAC uses a 1.18× index vs. EUR base, with premium positioning in JP and CN. Q3 revision is pending board approval — I can surface the draft for you.</p>
+                    </div>
+                  </div>
+
                 </div>
+                <p className="text-xs text-[#88898C] uppercase tracking-widest text-center mt-4">
+                  One AI. Every department. Zero friction.
+                </p>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Right: Demo Bot */}
+          {/* Right: Tools + Claude Cowork highlight */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col gap-5"
           >
-            <Card className="h-full bg-[#0E0E12] text-white border border-[#404044] rounded-[12px] shadow-none">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center text-[#FBFCFF] font-barlow uppercase tracking-wide">
-                  <Bot className="w-5 h-5 mr-2 text-[#EBD698]" />
-                  AFP Helper Bot
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-[#212225] rounded-[8px] p-4 space-y-4 border border-[#404044]">
-                  {/* User message */}
-                  <div className="flex justify-end">
-                    <div className="bg-[#292934] text-[#FBFCFF] rounded-[8px] rounded-tr-[2px] p-3 max-w-[85%] border border-[#404044]">
-                      <p className="text-xs font-semibold mb-1 text-[#88898C] uppercase tracking-wide">User</p>
-                      <p className="text-sm">What exactly counts as an AFP in the payment offering?</p>
-                    </div>
+            {/* Claude Cowork feature highlight */}
+            <Card className="bg-white border border-[#D8D8DB] rounded-[12px] shadow-none">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#EBD698]/15 border border-[#EBD698]/40 rounded-[8px] flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="w-5 h-5 text-[#EBD698]" />
                   </div>
-
-                  {/* Bot message */}
-                  <div className="flex justify-start">
-                    <div className="bg-[#0E0E12] text-[#FBFCFF] rounded-[8px] rounded-tl-[2px] p-3 max-w-[85%] border border-[#EBD698]/20">
-                      <p className="text-xs font-semibold mb-1 text-[#EBD698] uppercase tracking-wide">AFP Helper</p>
-                      <p className="text-sm text-[#AFB0B3]">
-                        AFP stands for Alternative Forms of Payment. This includes digital wallets, regional/local bank transfers, real-time payment methods, and other non-credit-card options that airlines can offer to increase global reach and conversion.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* User message */}
-                  <div className="flex justify-end">
-                    <div className="bg-[#292934] text-[#FBFCFF] rounded-[8px] rounded-tr-[2px] p-3 max-w-[85%] border border-[#404044]">
-                      <p className="text-xs font-semibold mb-1 text-[#88898C] uppercase tracking-wide">User</p>
-                      <p className="text-sm">And how does adding AFPs actually help an airline?</p>
-                    </div>
-                  </div>
-
-                  {/* Bot message */}
-                  <div className="flex justify-start">
-                    <div className="bg-[#0E0E12] text-[#FBFCFF] rounded-[8px] rounded-tl-[2px] p-3 max-w-[85%] border border-[#EBD698]/20">
-                      <p className="text-xs font-semibold mb-1 text-[#EBD698] uppercase tracking-wide">AFP Helper</p>
-                      <p className="text-sm text-[#AFB0B3]">
-                        AFPs boost conversion and market reach by letting airlines offer local, preferred payment methods—reducing checkout drop-off and capturing customers who don't use traditional cards.
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-bold text-[#010205] mb-1 font-barlow uppercase tracking-wide text-sm">Why Claude Cowork?</h4>
+                    <p className="text-sm text-[#535457] leading-relaxed">
+                      A shared AI workspace where every team works from the same prompts, knowledge base, and automations. One platform — consistent outputs across Marketing, Sales, HR, and Product.
+                    </p>
                   </div>
                 </div>
-                <div className="mt-4 text-center">
-                  <p className="text-xs text-[#88898C] uppercase tracking-widest">
-                    Micro GPT for domain knowledge
-                  </p>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  {[
+                    'Shared prompt library',
+                    'Multi-agent workflows',
+                    'Team knowledge base',
+                    'Audit & governance',
+                    'CI/CD integrations',
+                    'Custom AI personas',
+                  ].map((feat) => (
+                    <div key={feat} className="flex items-center gap-2">
+                      <ArrowRight className="w-3 h-3 text-[#010205] flex-shrink-0" />
+                      <span className="text-xs text-[#535457]">{feat}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
-        </div>
 
-        {/* AI Tools */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-2xl font-bold text-[#010205] mb-6 text-center font-barlow uppercase tracking-wide">
-            Stage 2 AI Tools
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {stage2Tools.map((tool, index) => {
-              const Icon = toolIcons[index];
-              return (
+            {/* Tools */}
+            <div className="space-y-3">
+              {stage2Tools.map((tool, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <Card className="h-full border border-[#D8D8DB] bg-white rounded-[12px] shadow-none hover:bg-[#EEEFF2] transition-colors duration-250">
-                    <CardContent className="pt-6">
-                      <div className="text-center">
-                        <div className="w-12 h-12 bg-[#010205] rounded-[8px] flex items-center justify-center mx-auto mb-4">
-                          <Icon className="w-6 h-6 text-[#FBFCFF]" />
-                        </div>
-                        <h4 className="font-bold text-base text-[#010205] mb-2 font-barlow uppercase tracking-wide">
-                          {tool.name}
-                        </h4>
-                        <p className="text-sm text-[#535457] leading-relaxed">{tool.description}</p>
+                  <Card className="bg-white border border-[#D8D8DB] rounded-[8px] shadow-none hover:border-[#010205] transition-colors duration-250">
+                    <CardContent className="p-4 flex items-center justify-between">
+                      <div>
+                        <h5 className="font-bold text-[#010205] text-sm font-barlow uppercase tracking-wide">{tool.name}</h5>
+                        <p className="text-xs text-[#535457] mt-0.5">{tool.description}</p>
                       </div>
+                      <span className="text-xs font-semibold text-[#010205] bg-[#EEEFF2] px-2 py-1 rounded-[4px] whitespace-nowrap ml-4">
+                        {tool.priceRange}
+                      </span>
                     </CardContent>
                   </Card>
                 </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

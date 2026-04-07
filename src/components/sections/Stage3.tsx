@@ -1,15 +1,12 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Rocket, MessageSquare, BarChart3, Database, Cloud, Bot, ExternalLink } from 'lucide-react';
-import { stage3Features, stage3Tools } from '@/data/stages';
+import { Rocket, MessageSquare, BarChart3, Database, ExternalLink } from 'lucide-react';
+import { stage3Features } from '@/data/stages';
 
 const featureIcons = [MessageSquare, BarChart3, Database];
-const toolIcons = [Database, Cloud, Bot];
 
 export function Stage3() {
-  const navigate = useNavigate();
 
   return (
     <section id="stage-3" className="py-24 bg-[#0E0E12] text-white relative overflow-hidden">
@@ -74,16 +71,6 @@ export function Stage3() {
                         </li>
                       ))}
                     </ul>
-                    {feature.title === 'Enterprise AI Assistant (DistillGenie++)' ? (
-                      <Button
-                        variant="outline"
-                        className="w-full bg-transparent text-[#FBFCFF] border-[#404044] hover:bg-[rgba(148,149,152,0.12)] hover:text-[#FBFCFF] rounded-[4px] text-sm"
-                        onClick={() => navigate('/distillgenie')}
-                      >
-                        Check it out
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
-                    ) : (
                       <Button
                         variant="outline"
                         className="w-full bg-transparent text-[#FBFCFF] border-[#404044] hover:bg-[rgba(148,149,152,0.12)] hover:text-[#FBFCFF] rounded-[4px] text-sm"
@@ -91,7 +78,6 @@ export function Stage3() {
                         Let's build it together
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-                    )}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -124,45 +110,6 @@ export function Stage3() {
           </Card>
         </motion.div>
 
-        {/* Enterprise AI Tools */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center font-barlow uppercase tracking-wide text-[#FBFCFF]">
-            Stage 3 Enterprise AI Tools
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {stage3Tools.map((tool, index) => {
-              const Icon = toolIcons[index];
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <Card className="h-full bg-[#212225] border border-[#404044] rounded-[12px] shadow-none hover:border-[#88898C] transition-colors duration-250">
-                    <CardContent className="pt-6">
-                      <div className="text-center">
-                        <div className="w-12 h-12 bg-[#292934] border border-[#404044] rounded-[8px] flex items-center justify-center mx-auto mb-4">
-                          <Icon className="w-6 h-6 text-[#EBD698]" />
-                        </div>
-                        <h4 className="font-bold text-base text-[#FBFCFF] mb-2 font-barlow uppercase tracking-wide">
-                          {tool.name}
-                        </h4>
-                        <p className="text-sm text-[#88898C] leading-relaxed">{tool.description}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

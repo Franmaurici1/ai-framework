@@ -174,73 +174,83 @@ export const stage1Tools: Tool[] = [
 // Stage 2 Details
 export const stage2Examples: AutomationExample[] = [
   {
-    title: 'Code → Documentation generator',
-    description: 'Generate technical documentation about any project and features with just a few clicks',
+    title: 'Product Launch Content Engine',
+    description: 'The moment a new product is registered, AI automatically generates on-brand product descriptions, press releases, social copy, and email campaigns — across every language and channel — ready to publish.',
   },
   {
-    title: 'Figma + Documentation → POC creation system',
-    description: 'Create visual POCs with minimum effort to evaluate viability and UI/UX',
+    title: 'Company Intelligence Chatbot',
+    description: 'A chatbot connected to all internal systems — brand guidelines, product catalog, pricing, processes, and market data — giving every department instant, governed answers to fuel faster decision-making.',
   },
   {
-    title: 'Meeting Transcript → Summary + Tasks',
-    description: 'Generate meeting summaries and action items from transcripts, even create tasks in Jira',
+    title: 'Zero-Effort Employee Onboarding',
+    description: 'New hires are automatically guided through a personalized onboarding journey: brand values, product knowledge, team processes, and role-specific resources — all delivered without any manual coordination.',
   },
   {
-    title: 'Micro GPTs for Porsche Design Domains',
-    description: 'Custom GPTs for Charge Accounts, AFPs, DataStream/DataMine documentation Q&A',
+    title: 'Meeting Intelligence Pipeline',
+    description: 'Every meeting is automatically transcribed, summarized, and turned into structured action items distributed to the right people — nothing falls through the cracks, zero manual effort.',
+  },
+  {
+    title: 'Brand Voice Generator',
+    description: 'AI trained on Porsche Design\'s unique aesthetic and tone produces on-brand copy for any use case — campaigns, product pages, internal comms — in seconds, consistent at scale.',
+  },
+  {
+    title: 'Market & Customer Feedback Loop',
+    description: 'AI continuously aggregates reviews, social signals, and customer feedback into weekly decision-ready intelligence reports delivered straight to leadership via Slack or email.',
   },
 ];
 
 export const stage2Tools: Tool[] = [
   {
-    name: 'Slack AI',
-    priceRange: '$10-$15/user/month',
-    description: 'Native AI capabilities for Slack-based workflows',
+    name: 'Claude Cowork',
+    priceRange: '$25–$200/user/month',
+    description: 'Shared AI workspace for cross-company automations, multi-agent workflows, and team-wide prompt libraries',
   },
   {
-    name: 'OpenAI/Claude Assistants',
-    priceRange: 'Usage-based ($0.01-$0.10 per query)',
-    description: 'Perfect for building micro-apps and custom GPTs',
+    name: 'Claude API + Agents',
+    priceRange: 'Usage-based',
+    description: 'Powers micro-apps, chatbots, and automated pipelines deeply integrated with internal systems',
   },
   {
-    name: 'LangGraph + LangChain',
-    priceRange: 'Infrastructure cost only',
-    description: 'Open-source framework for reusable agent workflows',
+    name: 'Slack AI + Zapier/Make',
+    priceRange: '$10–$30/user/month',
+    description: 'Connects AI automations to the tools teams already use — no new platforms to learn',
   },
 ];
 
 // Stage 3 Details
 export const stage3Features: Stage3Feature[] = [
   {
-    title: 'Enterprise AI Assistant (DistillGenie++)',
-    description: 'Intelligent Slack bot with live access to Porsche Design systems',
+    title: 'Autonomous Product Launch System',
+    description: 'A fully integrated AI engine that orchestrates the entire go-to-market lifecycle — from product registration to global content deployment — with zero manual handoffs.',
     bullets: [
-      'Natural language interface to query project status, vendor data, financial metrics',
-      'Proactive alerts for project risks, budget overruns, timeline delays',
-      'Integrated with Jira, Confluence, financial systems, and data warehouse',
+      'Detects new product entries and triggers a full content generation pipeline automatically',
+      'Produces on-brand descriptions, press releases, campaign copy and retailer assets in every language',
+      'Distributes finished assets to the right teams, channels and markets without human coordination',
+      'Learns from past launch performance to continuously improve output quality and relevance',
     ],
-    imagePlaceholder: 'Dashboard showing AI assistant conversations and insights',
+    imagePlaceholder: 'Product launch AI pipeline dashboard',
   },
   {
-    title: 'Project & Vendor Health Dashboard',
-    description: 'Real-time AI-powered visibility across all projects and vendors',
+    title: 'Company-Wide Intelligence Brain',
+    description: 'A deeply integrated AI layer connected to every Porsche Design system — brand, pricing, product catalog, market data, and processes — giving every department governed access to the intelligence it needs.',
     bullets: [
-      'Multi-vendor project tracking with anomaly detection',
-      'Predictive alerts for schedule slips, scope creep, or resource constraints',
-      'Executive dashboard with drill-down to individual projects',
+      'Single conversational interface across Marketing, Sales, HR, Operations, and Product',
+      'Answers complex questions by synthesizing data from multiple internal sources in real time',
+      'Surfaces proactive insights: pricing anomalies, market shifts, competitive signals, and risk flags',
+      'Role-based access ensures each team only sees what they are authorised to see',
     ],
-    imagePlaceholder: 'Project health dashboard with charts and status indicators',
+    imagePlaceholder: 'Company intelligence brain dashboard',
   },
   {
-    title: 'Product & Revenue Intelligence',
-    description: 'AI-driven analytics over governed Porsche Design data',
+    title: 'Intelligent Workforce Onboarding Platform',
+    description: 'An end-to-end AI system that delivers a fully personalised onboarding experience to every new hire — brand values, product knowledge, processes, and role-specific training — with zero coordination effort from HR.',
     bullets: [
-      'Using plain english to get information about how your products work',
-      'Where are you having the most revenue?',
-      'Where are you having the most compains?',
-      'Insights that can help desicion making',
+      'Onboarding journey auto-generated and personalised based on role, department, and location',
+      'AI answers every question the new hire has using live internal documentation and knowledge bases',
+      'Tracks progress, flags gaps, and adapts the programme in real time',
+      'Reduces time-to-productivity from weeks to days while freeing HR entirely from repetitive tasks',
     ],
-    imagePlaceholder: 'Revenue analytics dashboard with AI-generated insights',
+    imagePlaceholder: 'Intelligent onboarding platform dashboard',
   },
 ];
 
