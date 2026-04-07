@@ -4,9 +4,9 @@ import { Globe, Mail } from 'lucide-react';
 
 export function Author() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-24 bg-[#EEEFF2]">
       <div className="container mx-auto px-4">
-        {/* Handwritten Header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,15 +14,8 @@ export function Author() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto mb-8 text-center"
         >
-          <p
-            className="text-3xl md:text-4xl text-uatp-navy mb-2"
-            style={{
-              fontFamily: "'Caveat', cursive",
-              fontWeight: 400,
-              lineHeight: 1.4
-            }}
-          >
-            This AI Framework site was done using AI by:
+          <p className="text-xl text-[#535457] mb-2 font-inter">
+            This AI Framework site was built using AI by:
           </p>
         </motion.div>
 
@@ -33,7 +26,7 @@ export function Author() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <Card className="overflow-hidden border border-[#D8D8DB] rounded-[12px] shadow-none bg-white">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-3 gap-8 p-8">
                 {/* Left: Profile Picture */}
@@ -44,14 +37,11 @@ export function Author() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="flex flex-col items-center justify-center"
                 >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-uatp-teal to-uatp-green rounded-full blur-lg opacity-30"></div>
-                    <img
-                      src="https://ca.slack-edge.com/T03G61VPV-U01175Z2B8D-6b3b0b3619c0-512"
-                      alt="Francisco Maurici"
-                      className="relative w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl"
-                    />
-                  </div>
+                  <img
+                    src="https://ca.slack-edge.com/T03G61VPV-U01175Z2B8D-6b3b0b3619c0-512"
+                    alt="Francisco Maurici"
+                    className="w-40 h-40 rounded-[8px] object-cover border border-[#D8D8DB]"
+                  />
                 </motion.div>
 
                 {/* Right: Info */}
@@ -63,53 +53,51 @@ export function Author() {
                   className="md:col-span-2 flex flex-col justify-center"
                 >
                   <div className="mb-4">
-                    <h3 className="text-3xl font-bold text-uatp-navy mb-2">
+                    <h3 className="text-2xl font-bold text-[#010205] mb-1 font-barlow uppercase tracking-wide">
                       Francisco Maurici
                     </h3>
-                    <p className="text-lg text-uatp-teal font-semibold mb-1">
+                    <p className="text-sm font-semibold text-[#535457] mb-1 uppercase tracking-wide">
                       Head of Web Department at Distillery
                     </p>
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-xs text-[#88898C] mb-4 uppercase tracking-widest">
                       Framework Author
                     </p>
                   </div>
 
-                    
-
-                    {/* Contact Links */}
-                    <div className="flex items-center space-x-4">
-                      <a
-                        href="https://www.distillery.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-4 py-2 bg-uatp-navy text-white rounded-lg hover:bg-uatp-navy-dark transition-colors"
-                      >
-                        <Globe className="w-5 h-5" />
-                        <span className="text-sm font-medium">Distillery web site</span>
-                      </a>
-                      <a
-                        href="mailto:francisco.maurici@distillery.com"
-                        className="flex items-center space-x-2 px-4 py-2 border-2 border-uatp-teal text-uatp-teal rounded-lg hover:bg-uatp-teal hover:text-white transition-colors"
-                      >
-                        <Mail className="w-5 h-5" />
-                        <span className="text-sm font-medium">Email</span>
-                      </a>
-                    </div>
+                  {/* Contact Links */}
+                  <div className="flex items-center space-x-3">
+                    <a
+                      href="https://www.distillery.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 px-4 py-2 bg-[#010205] text-[#FBFCFF] rounded-[4px] hover:bg-[#212225] transition-colors duration-250 text-sm font-medium"
+                    >
+                      <Globe className="w-4 h-4" />
+                      <span>Distillery</span>
+                    </a>
+                    <a
+                      href="mailto:francisco.maurici@distillery.com"
+                      className="flex items-center space-x-2 px-4 py-2 border border-[#D8D8DB] text-[#010205] rounded-[4px] hover:bg-[#EEEFF2] transition-colors duration-250 text-sm font-medium"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Email</span>
+                    </a>
+                  </div>
                 </motion.div>
               </div>
 
-              {/* Bottom Bar - Distillery Info */}
+              {/* Bottom Bar */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-gradient-to-r from-uatp-navy to-uatp-navy-light text-white py-4 px-8"
+                className="bg-[#0E0E12] text-white py-4 px-8"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-semibold mb-1">About Distillery</p>
-                    <p className="text-xs text-gray-300">
+                    <p className="text-xs font-semibold mb-0.5 uppercase tracking-widest text-[#FBFCFF]">About Distillery</p>
+                    <p className="text-xs text-[#88898C]">
                       A leading technology consultancy specializing in AI integration, web development, and digital transformation
                     </p>
                   </div>
@@ -117,7 +105,7 @@ export function Author() {
                     href="https://distillery.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-uatp-teal hover:text-uatp-teal-light transition-colors text-sm font-medium"
+                    className="text-[#EBD698] hover:text-[#FBFCFF] transition-colors text-sm font-medium ml-6 whitespace-nowrap"
                   >
                     Learn More →
                   </a>

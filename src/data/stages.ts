@@ -98,17 +98,17 @@ export const stagesOverview: Stage[] = [
     title: 'Quick-Win Autos & Micro-Apps',
     tagline: 'Acceleration',
     description:
-      'Automate repetitive, time-consuming tasks with simple AI workflows and micro-applications for specific UATP use cases.',
+      'Automate repetitive, time-consuming tasks with simple AI workflows and micro-applications for specific Porsche Design use cases.',
     objectives: [],
     tools: [],
   },
   {
     id: 'stage-3',
     number: 3,
-    title: 'Tailored AI Systems for UATP',
+    title: 'Tailored AI Systems for Porsche Design',
     tagline: 'Transformation',
     description:
-      'Build game-changing AI systems deeply integrated with UATP data, operations, and products. Requires significant investment and governance.',
+      'Build game-changing AI systems deeply integrated with Porsche Design data, operations, and products. Requires significant investment and governance.',
     objectives: [],
     tools: [],
   },
@@ -186,7 +186,7 @@ export const stage2Examples: AutomationExample[] = [
     description: 'Generate meeting summaries and action items from transcripts, even create tasks in Jira',
   },
   {
-    title: 'Micro GPTs for UATP Domains',
+    title: 'Micro GPTs for Porsche Design Domains',
     description: 'Custom GPTs for Charge Accounts, AFPs, DataStream/DataMine documentation Q&A',
   },
 ];
@@ -213,7 +213,7 @@ export const stage2Tools: Tool[] = [
 export const stage3Features: Stage3Feature[] = [
   {
     title: 'Enterprise AI Assistant (DistillGenie++)',
-    description: 'Intelligent Slack bot with live access to UATP systems',
+    description: 'Intelligent Slack bot with live access to Porsche Design systems',
     bullets: [
       'Natural language interface to query project status, vendor data, financial metrics',
       'Proactive alerts for project risks, budget overruns, timeline delays',
@@ -233,7 +233,7 @@ export const stage3Features: Stage3Feature[] = [
   },
   {
     title: 'Product & Revenue Intelligence',
-    description: 'AI-driven analytics over governed UATP data',
+    description: 'AI-driven analytics over governed Porsche Design data',
     bullets: [
       'Using plain english to get information about how your products work',
       'Where are you having the most revenue?',
@@ -290,6 +290,6 @@ export const pricingSummaryData: PricingSummary[] = [
     coreTools: ['AtScale+Databricks', 'Azure OpenAI Enterprise', 'Claude Enterprise', 'Custom Dashboards'],
     priceRange: 'Enterprise contracts + dev investment',
     whyRecommended:
-      'Strategic competitive advantage, deeply integrated with UATP operations, requires governance investment',
+      'Strategic competitive advantage, deeply integrated with Porsche Design operations, requires governance investment',
   },
 ];

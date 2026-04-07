@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X, Menu } from 'lucide-react';
+import { X, Menu } from 'lucide-react';
 
 const navigationLinks = [
   { label: 'Home', href: '/', showArrow: false, isRoute: true },
-  { label: 'AI tools', href: '/ai-tools', showArrow: false, isRoute: true },
+  { label: 'AI Tools', href: '/ai-tools', showArrow: false, isRoute: true },
   { label: 'DistillGenie', href: '/distillgenie', showArrow: false, isRoute: true },
-  { label: 'How I built this with AI', href: '/built-with-ai', showArrow: false, isRoute: true, isButton: true },
+  { label: 'How I Built This', href: '/built-with-ai', showArrow: false, isRoute: true, isButton: true },
 ];
 
 export function Header() {
@@ -28,7 +28,6 @@ export function Header() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
 
-    // If not on home page, navigate to home first
     if (location.pathname !== '/') {
       navigate('/' + href);
       setTimeout(() => {
@@ -70,28 +69,25 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-250 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md'
-          : 'bg-white/80 backdrop-blur-sm'
+          ? 'bg-white shadow-none border-b border-[#D8D8DB]'
+          : 'bg-white border-b border-[#D8D8DB]'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
             href="/"
             onClick={handleLogoClick}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
             <img
-              src="/uatplogo.png"
-              alt="UATP Logo"
-              className="h-12 w-auto"
+              src="/porsche-design-logo.png"
+              alt="Porsche Design Logo"
+              className="h-8 w-auto"
             />
-            <span className="text-3xl font-bold text-uatp-navy leading-tight">
-              AI Framework
-            </span>
           </a>
 
           {/* Navigation Links */}
@@ -101,14 +97,14 @@ export function Header() {
                 {link.isButton ? (
                   <button
                     onClick={() => navigate(link.href)}
-                    className="px-4 py-2 text-sm font-medium text-white bg-uatp-teal hover:bg-teal-600 transition-colors rounded-md shadow-sm"
+                    className="px-5 py-2 text-sm font-semibold text-white bg-[#010205] hover:bg-[#212225] transition-colors duration-250 rounded-[4px] tracking-wide"
                   >
                     {link.label}
                   </button>
                 ) : link.isRoute ? (
                   <Link
                     to={link.href}
-                    className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-uatp-teal transition-colors rounded-md hover:bg-gray-100"
+                    className="px-4 py-2 text-sm font-medium text-[#535457] hover:text-[#010205] hover:bg-[rgba(148,149,152,0.12)] transition-colors duration-250 rounded-[4px]"
                   >
                     {link.label}
                   </Link>
@@ -116,13 +112,10 @@ export function Header() {
                   <a
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-uatp-teal transition-colors rounded-md hover:bg-gray-100"
+                    className="px-4 py-2 text-sm font-medium text-[#535457] hover:text-[#010205] hover:bg-[rgba(148,149,152,0.12)] transition-colors duration-250 rounded-[4px]"
                   >
                     {link.label}
                   </a>
-                )}
-                {link.showArrow && (
-                  <ArrowRight className="w-4 h-4 text-uatp-teal mx-1" />
                 )}
               </div>
             ))}
@@ -131,13 +124,13 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-uatp-navy hover:text-uatp-teal transition-colors"
+            className="lg:hidden p-2 text-[#010205] hover:bg-[rgba(148,149,152,0.12)] transition-colors duration-250 rounded-[4px]"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5" />
             )}
           </button>
         </div>
@@ -150,10 +143,10 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden overflow-hidden bg-white border-t border-gray-200"
+            transition={{ duration: 0.25 }}
+            className="lg:hidden overflow-hidden bg-white border-t border-[#D8D8DB]"
           >
-            <nav className="container mx-auto px-4 py-4 space-y-2">
+            <nav className="container mx-auto px-4 py-4 space-y-1">
               {navigationLinks.map((link) => (
                 <div key={link.href}>
                   {link.isButton ? (
@@ -162,7 +155,7 @@ export function Header() {
                         navigate(link.href);
                         setIsMobileMenuOpen(false);
                       }}
-                      className="w-full text-left px-4 py-3 text-sm font-medium text-white bg-uatp-teal hover:bg-teal-600 transition-colors rounded-md"
+                      className="w-full text-left px-4 py-3 text-sm font-semibold text-white bg-[#010205] hover:bg-[#212225] transition-colors duration-250 rounded-[4px]"
                     >
                       {link.label}
                     </button>
@@ -170,7 +163,7 @@ export function Header() {
                     <Link
                       to={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-uatp-teal hover:bg-gray-50 transition-colors rounded-md"
+                      className="block px-4 py-3 text-sm font-medium text-[#535457] hover:text-[#010205] hover:bg-[rgba(148,149,152,0.12)] transition-colors duration-250 rounded-[4px]"
                     >
                       {link.label}
                     </Link>
@@ -181,7 +174,7 @@ export function Header() {
                         scrollToSection(e, link.href);
                         setIsMobileMenuOpen(false);
                       }}
-                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-uatp-teal hover:bg-gray-50 transition-colors rounded-md"
+                      className="block px-4 py-3 text-sm font-medium text-[#535457] hover:text-[#010205] hover:bg-[rgba(148,149,152,0.12)] transition-colors duration-250 rounded-[4px]"
                     >
                       {link.label}
                     </a>

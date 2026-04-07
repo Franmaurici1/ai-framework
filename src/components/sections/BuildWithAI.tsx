@@ -6,44 +6,38 @@ const buildStages = [
   {
     number: 1,
     title: 'Research & Discovery',
-    description: 'Used GPT 4.5 / Claude Sonnet 4.5 (deep research mode) to investigate UATP using only publicly available information',
+    description: 'Used GPT 4.5 / Claude Sonnet 4.5 (deep research mode) to investigate using only publicly available information',
     icon: Search,
-    color: 'from-blue-500 to-blue-600',
   },
   {
     number: 2,
     title: 'Needs Analysis',
-    description: 'Narrowed down key business requirements and identified potential pain points UATP might face',
+    description: 'Narrowed down key business requirements and identified potential pain points that might be faced',
     icon: Target,
-    color: 'from-purple-500 to-purple-600',
   },
   {
     number: 3,
     title: 'Framework Planning',
     description: 'Used GPT 4.5 to create a comprehensive AI adoption framework, combining industry expertise with AI-powered tool research',
     icon: FileText,
-    color: 'from-pink-500 to-pink-600',
   },
   {
     number: 4,
     title: 'Design Documentation',
     description: 'Generated detailed site documentation with GPT 4.5, then created a structured design prompt for implementation',
     icon: Palette,
-    color: 'from-orange-500 to-orange-600',
   },
   {
     number: 5,
     title: 'Development Sprint',
     description: 'Built the entire site using Claude Code (Claude Sonnet 4.5) and Cursor, leveraging AI-assisted development',
     icon: Code2,
-    color: 'from-teal-500 to-teal-600',
   },
   {
     number: 6,
     title: 'Polish & Refinement',
     description: 'Applied final touches through a combination of manual adjustments and AI-powered optimizations',
     icon: Sparkles,
-    color: 'from-green-500 to-green-600',
   },
 ];
 
@@ -61,37 +55,31 @@ const technicalExcellence = [
     icon: Rocket,
     title: 'Production-Ready Architecture',
     description: 'Built with scalable component architecture following React best practices, ensuring maintainability and long-term growth.',
-    color: 'from-blue-500 to-blue-600',
   },
   {
     icon: Database,
     title: 'Backend Agnostic Design',
     description: 'Modular architecture ready to integrate with any backend—REST APIs, GraphQL, Firebase, Supabase, or custom solutions.',
-    color: 'from-purple-500 to-purple-600',
   },
   {
     icon: Layers,
     title: 'Component-Driven Development',
     description: 'Reusable, composable components with clear separation of concerns, making updates and feature additions seamless.',
-    color: 'from-teal-500 to-teal-600',
   },
   {
     icon: Shield,
     title: 'Type-Safe Codebase',
     description: 'Full TypeScript implementation with strict type checking, catching errors at compile-time and improving developer experience.',
-    color: 'from-orange-500 to-orange-600',
   },
   {
     icon: Workflow,
     title: 'Optimized Performance',
     description: 'Code splitting, lazy loading, and optimized bundle sizes ensure fast load times and excellent user experience.',
-    color: 'from-pink-500 to-pink-600',
   },
   {
     icon: CheckCircle2,
     title: 'Industry Best Practices',
     description: 'Follows SOLID principles, accessibility standards (WCAG), and modern web development patterns throughout.',
-    color: 'from-green-500 to-green-600',
   },
 ];
 
@@ -116,9 +104,15 @@ const aiDrivenBenefits = [
 
 export function BuildWithAI() {
   return (
-    <section id="built-with-ai" className="pt-32 pb-24 bg-gradient-to-br from-gray-900 via-uatp-navy to-gray-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6bTAgMjBjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptLTIwIDRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+    <section id="built-with-ai" className="pt-32 pb-24 bg-[#0E0E12] text-white relative overflow-hidden">
+      {/* Subtle grid */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: 'linear-gradient(#FBFCFF 1px, transparent 1px), linear-gradient(90deg, #FBFCFF 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -129,14 +123,14 @@ export function BuildWithAI() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-uatp-teal to-uatp-green rounded-full text-sm font-semibold mb-6">
-            <Zap className="w-4 h-4" />
+          <div className="inline-flex items-center space-x-2 px-3 py-1.5 border border-[#404044] text-[#AFB0B3] rounded-[4px] text-xs font-semibold mb-6 tracking-widest uppercase">
+            <Zap className="w-3 h-3" />
             <span>AI-Powered Development</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-barlow uppercase tracking-wide text-[#FBFCFF]">
             Built in 4 Hours with AI
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-[#AFB0B3] max-w-3xl mx-auto">
             This entire website—from research to deployment—was created in just 4 hours using cutting-edge AI tools. Here's how artificial intelligence transformed weeks of work into hours.
           </p>
         </motion.div>
@@ -149,25 +143,25 @@ export function BuildWithAI() {
           transition={{ duration: 0.5 }}
           className="flex justify-center mb-16"
         >
-          <div className="bg-gradient-to-r from-uatp-teal to-uatp-green p-8 rounded-2xl shadow-2xl">
+          <div className="bg-[#212225] border border-[#EBD698]/30 p-8 rounded-[8px]">
             <div className="flex items-center space-x-4">
-              <Clock className="w-12 h-12 text-white" />
+              <Clock className="w-10 h-10 text-[#EBD698]" />
               <div>
-                <div className="text-5xl font-bold text-white">4 Hours</div>
-                <div className="text-sm text-white/80">From Concept to Completion</div>
+                <div className="text-5xl font-bold text-[#FBFCFF] font-barlow">4 Hours</div>
+                <div className="text-xs text-[#88898C] uppercase tracking-widest mt-1">From Concept to Completion</div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Build Stages Timeline */}
+        {/* Build Stages */}
         <div className="mb-16">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-center mb-12"
+            className="text-3xl font-bold text-center mb-12 font-barlow uppercase tracking-wide text-[#FBFCFF]"
           >
             The Development Journey
           </motion.h3>
@@ -182,22 +176,21 @@ export function BuildWithAI() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
                 >
-                  <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all">
+                  <Card className="h-full bg-[#212225] border border-[#404044] rounded-[12px] shadow-none hover:border-[#88898C] transition-colors duration-250">
                     <CardContent className="pt-6">
                       <div className="flex items-start mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${stage.color} rounded-lg flex items-center justify-center mr-4 flex-shrink-0`}>
-                          <Icon className="w-6 h-6 text-white" />
+                        <div className="w-10 h-10 bg-[#292934] border border-[#404044] rounded-[8px] flex items-center justify-center mr-3 flex-shrink-0">
+                          <Icon className="w-5 h-5 text-[#EBD698]" />
                         </div>
                         <div className="flex-1">
-                          <div className="text-sm text-gray-400 mb-1">Stage {stage.number}</div>
-                          <h4 className="text-xl font-bold text-white mb-2">
+                          <div className="text-xs text-[#88898C] mb-1 uppercase tracking-widest">Stage {stage.number}</div>
+                          <h4 className="text-base font-bold text-[#FBFCFF] font-barlow uppercase tracking-wide">
                             {stage.title}
                           </h4>
                         </div>
                       </div>
-                      <p className="text-sm text-gray-300 leading-relaxed">
+                      <p className="text-sm text-[#88898C] leading-relaxed">
                         {stage.description}
                       </p>
                     </CardContent>
@@ -208,7 +201,7 @@ export function BuildWithAI() {
           </div>
         </div>
 
-        {/* Technologies Used */}
+        {/* Technologies */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -216,7 +209,7 @@ export function BuildWithAI() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h3 className="text-3xl font-bold text-center mb-8">
+          <h3 className="text-3xl font-bold text-center mb-8 font-barlow uppercase tracking-wide text-[#FBFCFF]">
             Technologies Powering This Site
           </h3>
 
@@ -228,12 +221,11 @@ export function BuildWithAI() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all">
+                <Card className="bg-[#212225] border border-[#404044] rounded-[8px] shadow-none hover:border-[#88898C] transition-colors duration-250">
                   <CardContent className="p-4">
-                    <h4 className="font-bold text-white mb-1">{tech.name}</h4>
-                    <p className="text-sm text-gray-400">{tech.description}</p>
+                    <h4 className="font-bold text-[#FBFCFF] mb-1 text-sm font-barlow uppercase tracking-wide">{tech.name}</h4>
+                    <p className="text-xs text-[#88898C]">{tech.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -241,7 +233,7 @@ export function BuildWithAI() {
           </div>
         </motion.div>
 
-        {/* Technical Excellence Section */}
+        {/* Technical Excellence */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -250,10 +242,10 @@ export function BuildWithAI() {
           className="mb-16"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-3xl font-bold mb-4 font-barlow uppercase tracking-wide text-[#FBFCFF]">
               Enterprise-Grade Technical Excellence
             </h3>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-[#AFB0B3] max-w-3xl mx-auto">
               Built with scalability, flexibility, and maintainability at its core—ready to grow with your organization.
             </p>
           </div>
@@ -269,15 +261,15 @@ export function BuildWithAI() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all hover:border-uatp-teal/50">
+                  <Card className="h-full bg-[#212225] border border-[#404044] rounded-[12px] shadow-none hover:border-[#88898C] transition-colors duration-250">
                     <CardContent className="pt-6">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-4`}>
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 bg-[#292934] border border-[#404044] rounded-[8px] flex items-center justify-center mb-4">
+                        <Icon className="w-5 h-5 text-[#EBD698]" />
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-3">
+                      <h4 className="text-base font-bold text-[#FBFCFF] mb-3 font-barlow uppercase tracking-wide">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-gray-300 leading-relaxed">
+                      <p className="text-sm text-[#88898C] leading-relaxed">
                         {item.description}
                       </p>
                     </CardContent>
@@ -287,15 +279,15 @@ export function BuildWithAI() {
             })}
           </div>
 
-          {/* AI-Driven Development Benefits */}
-          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+          {/* AI-Driven Benefits */}
+          <Card className="bg-[#212225] border border-[#404044] rounded-[12px] shadow-none">
             <CardContent className="p-8">
               <div className="text-center mb-8">
-                <Sparkles className="w-10 h-10 text-uatp-teal mx-auto mb-3" />
-                <h4 className="text-2xl font-bold text-white mb-2">
+                <Sparkles className="w-8 h-8 text-[#EBD698] mx-auto mb-3" />
+                <h4 className="text-xl font-bold text-[#FBFCFF] mb-2 font-barlow uppercase tracking-wide">
                   Why AI-Driven Development Delivers Superior Results
                 </h4>
-                <p className="text-gray-200">
+                <p className="text-[#88898C] text-sm">
                   Beyond speed—AI brings consistency, quality, and expertise to every line of code
                 </p>
               </div>
@@ -311,15 +303,15 @@ export function BuildWithAI() {
                     className="flex gap-4"
                   >
                     <div className="flex-shrink-0">
-                      <div className="w-8 h-8 rounded-lg bg-uatp-teal/20 flex items-center justify-center">
-                        <CheckCircle2 className="w-5 h-5 text-uatp-teal" />
+                      <div className="w-7 h-7 rounded-[4px] bg-[#EBD698]/10 border border-[#EBD698]/30 flex items-center justify-center">
+                        <CheckCircle2 className="w-4 h-4 text-[#EBD698]" />
                       </div>
                     </div>
                     <div>
-                      <h5 className="text-lg font-semibold text-white mb-2">
+                      <h5 className="text-base font-semibold text-[#FBFCFF] mb-1 font-barlow uppercase tracking-wide">
                         {benefit.title}
                       </h5>
-                      <p className="text-sm text-gray-200 leading-relaxed">
+                      <p className="text-sm text-[#88898C] leading-relaxed">
                         {benefit.description}
                       </p>
                     </div>
@@ -338,33 +330,33 @@ export function BuildWithAI() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <Card className="bg-gradient-to-r from-uatp-navy to-gray-900 border-white/20 backdrop-blur-lg overflow-hidden">
+          <Card className="bg-[#212225] border border-[#404044] rounded-[12px] shadow-none overflow-hidden">
             <CardContent className="p-10">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <Database className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
-                  <h5 className="text-xl font-bold text-white mb-2">
+                  <Database className="w-10 h-10 text-[#EBD698] mx-auto mb-4" />
+                  <h5 className="text-lg font-bold text-[#FBFCFF] mb-2 font-barlow uppercase tracking-wide">
                     Infinite Scalability
                   </h5>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-[#88898C] text-sm leading-relaxed">
                     Designed to handle growth from dozens to millions of users with minimal architectural changes
                   </p>
                 </div>
                 <div>
-                  <Layers className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
-                  <h5 className="text-xl font-bold text-white mb-2">
+                  <Layers className="w-10 h-10 text-[#EBD698] mx-auto mb-4" />
+                  <h5 className="text-lg font-bold text-[#FBFCFF] mb-2 font-barlow uppercase tracking-wide">
                     Multi-Backend Ready
                   </h5>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-[#88898C] text-sm leading-relaxed">
                     Plug into REST, GraphQL, WebSockets, or any data source—architecture adapts to your needs
                   </p>
                 </div>
                 <div>
-                  <Workflow className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
-                  <h5 className="text-xl font-bold text-white mb-2">
+                  <Workflow className="w-10 h-10 text-[#EBD698] mx-auto mb-4" />
+                  <h5 className="text-lg font-bold text-[#FBFCFF] mb-2 font-barlow uppercase tracking-wide">
                     CI/CD Integration
                   </h5>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-[#88898C] text-sm leading-relaxed">
                     Built for modern DevOps workflows with automated testing, deployment, and monitoring capabilities
                   </p>
                 </div>
@@ -373,7 +365,7 @@ export function BuildWithAI() {
           </Card>
         </motion.div>
 
-        {/* Why 4 Hours Section */}
+        {/* Why 4 Hours */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -381,112 +373,77 @@ export function BuildWithAI() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <Card className="bg-gradient-to-br from-uatp-navy to-gray-900 border-uatp-teal/30 backdrop-blur-lg overflow-hidden">
+          <Card className="bg-[#212225] border border-[#EBD698]/20 rounded-[12px] shadow-none overflow-hidden">
             <CardContent className="p-10">
               <div className="text-center mb-8">
-                <Target className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
-                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                  Why This Entire Site Was Built in Just 4 Hours
+                <Target className="w-10 h-10 text-[#EBD698] mx-auto mb-4" />
+                <h3 className="text-3xl lg:text-4xl font-bold text-[#FBFCFF] mb-4 font-barlow uppercase tracking-wide">
+                  Why This Site Was Built in Just 4 Hours
                 </h3>
-                <p className="text-xl text-gray-200 max-w-5xl mx-auto leading-relaxed mb-6">
+                <p className="text-lg text-[#AFB0B3] max-w-5xl mx-auto leading-relaxed mb-6">
                   The speed at which this site was created is not an accident, and it's not simply "because of AI." It is the result of hundreds of hours of prior work: testing tools, researching models, configuring workflows, building automations, refining prompts, and understanding how each AI system behaves in real production environments.
                 </p>
 
-                {/* Divider Line */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-full max-w-xs h-[2px] bg-gradient-to-r from-transparent via-uatp-teal to-transparent"></div>
+                  <div className="w-full max-w-xs h-px bg-[#404044]"></div>
                 </div>
 
-                <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-base text-[#88898C] max-w-4xl mx-auto leading-relaxed">
                   Over the last year I've invested significant time into understanding and mastering these critical areas:
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-5xl mx-auto">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Researching the best AI tools for each type of work, understanding their strengths, limitations, and hidden capabilities
-                    </p>
+                {[
+                  'Researching the best AI tools for each type of work, understanding their strengths, limitations, and hidden capabilities',
+                  'Configuring environments like Cursor, Claude Code, OpenAI Assistants, and Slack bots for optimal performance',
+                  'Building reusable templates, automations, and internal design systems that accelerate every new project',
+                  'Learning how to integrate AI effectively into software, product, and operational workflows',
+                ].map((text, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#EBD698] flex-shrink-0 mt-0.5" />
+                    <p className="text-[#AFB0B3] text-sm leading-relaxed">{text}</p>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Configuring environments like Cursor, Claude Code, OpenAI Assistants, and Slack bots for optimal performance
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Building reusable templates, automations, and internal design systems that accelerate every new project
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-uatp-teal flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Learning how to integrate AI effectively into software, product, and operational workflows
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="max-w-4xl mx-auto mb-8">
-                <p className="text-xl text-white text-center font-semibold mb-6">
+                <p className="text-lg text-[#FBFCFF] text-center font-semibold font-barlow uppercase tracking-wide">
                   That accumulated expertise is what allows me to move at this level of velocity.
                 </p>
               </div>
 
-              <div className="bg-white/5 rounded-xl p-8 border border-white/10 max-w-5xl mx-auto mb-8">
-                <p className="text-xl text-white leading-relaxed text-center mb-6">
+              <div className="bg-[#0E0E12] rounded-[8px] p-8 border border-[#404044] max-w-5xl mx-auto mb-8">
+                <p className="text-base text-[#FBFCFF] leading-relaxed text-center mb-6">
                   AI can dramatically accelerate output — but not instantly.
                 </p>
-                <p className="text-gray-200 leading-relaxed mb-4">
+                <p className="text-[#88898C] text-sm leading-relaxed mb-4">
                   There is a learning curve, there are configuration steps, and real impact requires:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Knowing which tool is right for which task
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Guide AI through prompts, patterns, and constraints
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Building the right scaffolding and system design around the AI
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-uatp-teal flex-shrink-0 mt-2"></div>
-                    <p className="text-gray-200 leading-relaxed">
-                      Avoiding the pitfalls that slow down teams
-                    </p>
-                  </div>
+                  {[
+                    'Knowing which tool is right for which task',
+                    'Guide AI through prompts, patterns, and constraints',
+                    'Building the right scaffolding and system design around the AI',
+                    'Avoiding the pitfalls that slow down teams',
+                  ].map((text, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#EBD698] flex-shrink-0 mt-2"></div>
+                      <p className="text-[#88898C] text-sm leading-relaxed">{text}</p>
+                    </div>
+                  ))}
                 </div>
-                <p className="text-gray-300 leading-relaxed text-center mt-6 text-lg">
-                  You don't get this speed by "just plugging AI into the company." You get it through the combination of <strong className="text-white">AI + experience + the right guidance.</strong>
+                <p className="text-[#AFB0B3] leading-relaxed text-center mt-6 text-sm">
+                  You don't get this speed by "just plugging AI into the company." You get it through the combination of <strong className="text-[#FBFCFF]">AI + experience + the right guidance.</strong>
                 </p>
               </div>
 
-              <div className="bg-gradient-to-r from-uatp-teal/20 to-uatp-green/20 rounded-xl p-8 border border-uatp-teal/30 max-w-5xl mx-auto">
-                <p className="text-xl text-white leading-relaxed mb-4">
+              <div className="bg-[#EBD698]/5 rounded-[8px] p-8 border border-[#EBD698]/20 max-w-5xl mx-auto">
+                <p className="text-base text-[#FBFCFF] leading-relaxed mb-4">
                   <strong>This is the value Distillery brings:</strong> the ability to interpret what the business needs, choose the right tools, configure them effectively, and build systems that turn AI into a multiplier — not a distraction.
                 </p>
-                <p className="text-lg text-gray-200 leading-relaxed">
-                  That's why this site took 4 hours instead of 40+. And that's exactly the kind of acceleration UATP can unlock with the right framework and expertise behind it.
+                <p className="text-sm text-[#AFB0B3] leading-relaxed">
+                  That's why this site took 4 hours instead of 40+. And that's exactly the kind of acceleration you can unlock with the right framework and expertise behind it.
                 </p>
               </div>
             </CardContent>
@@ -501,16 +458,16 @@ export function BuildWithAI() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <Card className="bg-white/10 border-uatp-teal/50 backdrop-blur-lg max-w-4xl mx-auto shadow-xl">
+          <Card className="bg-[#212225] border border-[#404044] rounded-[12px] shadow-none max-w-4xl mx-auto">
             <CardContent className="p-8">
-              <Sparkles className="w-12 h-12 text-uatp-teal mx-auto mb-4" />
-              <h4 className="text-2xl font-bold text-white mb-4">
+              <Sparkles className="w-10 h-10 text-[#EBD698] mx-auto mb-4" />
+              <h4 className="text-xl font-bold text-[#FBFCFF] mb-4 font-barlow uppercase tracking-wide">
                 The Future of Development is Here
               </h4>
-              <p className="text-white text-lg leading-relaxed mb-4">
+              <p className="text-[#AFB0B3] text-base leading-relaxed mb-4">
                 What traditionally would take weeks of planning, design, and development was accomplished in just 4 hours by leveraging AI as a collaborative partner. This is not just a demo—it's proof that AI can accelerate your team's productivity while maintaining quality and precision.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-[#88898C] text-sm leading-relaxed">
                 Every aspect—from component architecture to styling choices—reflects industry best practices and enterprise-grade standards. The result is a scalable, maintainable, and production-ready application that demonstrates the transformative power of AI-assisted development.
               </p>
             </CardContent>

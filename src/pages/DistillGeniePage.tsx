@@ -96,9 +96,9 @@ export function DistillGeniePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-uatp-navy via-uatp-navy-light to-uatp-teal pt-20">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6bTAgMjBjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptLTIwIDRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0E0E12] pt-20">
+        {/* Subtle grid */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(#FBFCFF 1px, transparent 1px), linear-gradient(90deg, #FBFCFF 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -130,7 +130,7 @@ export function DistillGeniePage() {
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Your data.
                 <br />
-                <span className="text-uatp-teal">One conversation away.</span>
+                <span className="text-[#EBD698]">One conversation away.</span>
               </h1>
 
               {/* Subheadline */}
@@ -169,8 +169,7 @@ export function DistillGeniePage() {
                 >
                   <div className="w-full px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-center">
                     <p
-                      className="text-white text-2xl font-bold"
-                      style={{ fontFamily: "'Caveat', cursive" }}
+                      className="text-[#FBFCFF] text-xl font-semibold font-inter"
                     >
                       👆 ✨ This demo was done with AI too!
                     </p>
@@ -191,15 +190,15 @@ export function DistillGeniePage() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2"
+            className="w-5 h-8 border border-[#404044] rounded-full flex justify-center pt-1.5"
           >
-            <div className="w-1 h-3 bg-white/70 rounded-full"></div>
+            <div className="w-0.5 h-2 bg-[#88898C] rounded-full"></div>
           </motion.div>
         </motion.div>
       </section>
 
       {/* Why DistillGenie Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#EEEFF2]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,7 +207,7 @@ export function DistillGeniePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
               Why DistillGenie?
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
@@ -226,12 +225,12 @@ export function DistillGeniePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-8 h-full bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 hover:border-uatp-teal hover:shadow-xl transition-all duration-300">
+                <Card className="p-8 h-full bg-gradient-to-br from-gray-50 to-white border border-[#D8D8DB] hover:border-[#010205] hover:shadow-none transition-all duration-300">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-uatp-teal to-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-[4px] bg-[#010205] flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-bold text-uatp-navy">
+                    <h3 className="text-xl font-bold text-[#010205] font-barlow uppercase tracking-wide">
                       {feature.title}
                     </h3>
                   </div>
@@ -273,7 +272,7 @@ export function DistillGeniePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
               Key Features
             </h2>
           </motion.div>
@@ -288,10 +287,10 @@ export function DistillGeniePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="p-6 h-full hover:shadow-xl transition-shadow duration-300">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
+                  <div className={`w-12 h-12 rounded-[8px] bg-[#010205] flex items-center justify-center mb-4`}>
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-uatp-navy mb-3">
+                  <h4 className="text-xl font-bold text-[#010205] font-barlow uppercase tracking-wide mb-3">
                     {feature.title}
                   </h4>
                   <p className="text-gray-600 leading-relaxed">
@@ -305,7 +304,7 @@ export function DistillGeniePage() {
       </section>
 
       {/* Engineered for Scale Section */}
-      <section className="py-20 bg-gradient-to-br from-uatp-navy via-uatp-navy-light to-uatp-navy text-white">
+      <section className="py-20 bg-[#0E0E12] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -326,8 +325,8 @@ export function DistillGeniePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="p-8 h-full bg-white/10 backdrop-blur-lg border-white/20">
-                <Shield className="w-12 h-12 text-uatp-teal mb-4" />
+              <Card className="p-8 h-full bg-[#212225] border border-[#404044] shadow-none rounded-[12px]">
+                <Shield className="w-12 h-12 text-[#EBD698] mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-white">Secure & Auditable</h3>
                 <p className="text-gray-200">
                   Future-proof architecture built with security and compliance at its core.
@@ -341,8 +340,8 @@ export function DistillGeniePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card className="p-8 h-full bg-white/10 backdrop-blur-lg border-white/20">
-                <Zap className="w-12 h-12 text-uatp-teal mb-4" />
+              <Card className="p-8 h-full bg-[#212225] border border-[#404044] shadow-none rounded-[12px]">
+                <Zap className="w-12 h-12 text-[#EBD698] mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-white">Works on Your Stack</h3>
                 <p className="text-gray-200">
                   Integrates with any LLM (OpenAI, Anthropic, Gemini…), any channel (Slack, Google Meet, Teams, Zoom…) and any data layer.
@@ -356,8 +355,8 @@ export function DistillGeniePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="p-8 h-full bg-white/10 backdrop-blur-lg border-white/20">
-                <Layers className="w-12 h-12 text-uatp-teal mb-4" />
+              <Card className="p-8 h-full bg-[#212225] border border-[#404044] shadow-none rounded-[12px]">
+                <Layers className="w-12 h-12 text-[#EBD698] mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-white">Modern Architecture</h3>
                 <p className="text-gray-200">
                   Built with FastAPI backend on AWS Lambda, LangGraph/LangChain translation, AtScale MCP as semantic layer engine.
@@ -378,7 +377,7 @@ export function DistillGeniePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
               Seamless Integration Across Platforms
             </h2>
           </motion.div>
@@ -410,7 +409,7 @@ export function DistillGeniePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
               Who It's For
             </h2>
           </motion.div>
@@ -426,11 +425,11 @@ export function DistillGeniePage() {
               >
                 <Card className="p-8 h-full bg-white hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-uatp-teal to-blue-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-[8px] bg-[#010205] flex items-center justify-center flex-shrink-0">
                       <useCase.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-uatp-navy mb-2">
+                      <h3 className="text-xl font-bold text-[#010205] font-barlow uppercase tracking-wide mb-2">
                         {useCase.title}
                       </h3>
                       <p className="text-gray-600">
@@ -446,9 +445,9 @@ export function DistillGeniePage() {
       </section>
 
       {/* Your Stack Section */}
-      <section className="py-20 bg-gradient-to-br from-uatp-navy to-uatp-navy-light relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6bTAgMjBjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptLTIwIDRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+      <section className="py-20 bg-[#0E0E12] relative overflow-hidden">
+        {/* Subtle grid */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#FBFCFF 1px, transparent 1px), linear-gradient(90deg, #FBFCFF 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -458,7 +457,7 @@ export function DistillGeniePage() {
           className="w-full relative z-10"
         >
           <div className="container mx-auto px-4 max-w-5xl">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-12 text-white text-center shadow-2xl">
+            <div className="bg-[#212225] border border-[#404044] rounded-[12px] p-12 text-white text-center shadow-none">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Your Stack. Your Workflow.
               </h2>
@@ -468,19 +467,19 @@ export function DistillGeniePage() {
                 or any other data stack.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 bg-[#292934] rounded-[4px] text-sm font-medium border border-[#404044]">
                   Slack
                 </span>
-                <span className="px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 bg-[#292934] rounded-[4px] text-sm font-medium border border-[#404044]">
                   Google Meet
                 </span>
-                <span className="px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 bg-[#292934] rounded-[4px] text-sm font-medium border border-[#404044]">
                   Microsoft Teams
                 </span>
-                <span className="px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 bg-[#292934] rounded-[4px] text-sm font-medium border border-[#404044]">
                   Zoom
                 </span>
-                <span className="px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 bg-[#292934] rounded-[4px] text-sm font-medium border border-[#404044]">
                   Snowflake Cortex
                 </span>
               </div>

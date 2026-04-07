@@ -7,7 +7,7 @@ const toolIcons = [Wrench, Bot, Code2];
 
 export function Stage1() {
   return (
-    <section id="stage-1" className="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section id="stage-1" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -17,13 +17,13 @@ export function Stage1() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
-            Stage 1 – Foundation
+          <div className="inline-block px-3 py-1.5 border border-[#D8D8DB] text-[#535457] rounded-[4px] text-xs font-semibold mb-4 tracking-widest uppercase">
+            Stage 1 — Foundation
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
             Use Market Tools, Maximize Impact, Stay in Control
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl">
+          <p className="text-lg text-[#535457] max-w-3xl">
             Identify your highest-cost processes, improve them with best-in-class AI tools, and introduce governance to ensure security, compliance, and ROI measurement.
           </p>
         </motion.div>
@@ -37,9 +37,9 @@ export function Stage1() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="h-full">
+            <Card className="h-full border border-[#D8D8DB] rounded-[12px] shadow-none">
               <CardHeader>
-                <CardTitle className="text-2xl text-uatp-navy">
+                <CardTitle className="text-xl text-[#010205] font-barlow uppercase tracking-wide">
                   Key Objectives
                 </CardTitle>
               </CardHeader>
@@ -54,8 +54,8 @@ export function Stage1() {
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="flex items-start"
                     >
-                      <CheckCircle2 className="w-6 h-6 text-uatp-teal mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{objective}</span>
+                      <CheckCircle2 className="w-5 h-5 text-[#010205] mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-[#535457] text-sm leading-relaxed">{objective}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -70,9 +70,9 @@ export function Stage1() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="h-full bg-gradient-to-br from-uatp-navy to-uatp-navy-light text-white">
+            <Card className="h-full bg-[#0E0E12] text-white border border-[#404044] rounded-[12px] shadow-none">
               <CardHeader>
-                <CardTitle className="text-2xl">
+                <CardTitle className="text-xl text-[#FBFCFF] font-barlow uppercase tracking-wide">
                   Tool Matrix by Department
                 </CardTitle>
               </CardHeader>
@@ -85,16 +85,16 @@ export function Stage1() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="border-l-4 border-uatp-teal pl-4"
+                      className="border-l-2 border-[#EBD698] pl-4"
                     >
-                      <h4 className="font-semibold mb-2 text-uatp-teal">
+                      <h4 className="font-semibold mb-2 text-[#EBD698] text-sm tracking-wide uppercase">
                         {dept.department}
                       </h4>
                       <div className="space-y-2">
                         {dept.tools.map((tool, i) => (
                           <div key={i} className="text-sm">
-                            <span className="font-medium">{tool.name}</span>
-                            <span className="text-gray-300"> – {tool.reason}</span>
+                            <span className="font-medium text-[#FBFCFF]">{tool.name}</span>
+                            <span className="text-[#88898C]"> — {tool.reason}</span>
                           </div>
                         ))}
                       </div>
@@ -113,7 +113,7 @@ export function Stage1() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-uatp-navy mb-6 text-center">
+          <h3 className="text-2xl font-bold text-[#010205] mb-6 text-center font-barlow uppercase tracking-wide">
             Stage 1 AI Tools
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -126,18 +126,17 @@ export function Stage1() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 >
-                  <Card className="h-full hover:shadow-lg transition-shadow">
+                  <Card className="h-full border border-[#D8D8DB] rounded-[12px] shadow-none hover:bg-[#EEEFF2] transition-colors duration-250">
                     <CardContent className="pt-6">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-br from-uatp-teal to-uatp-green rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Icon className="w-8 h-8 text-white" />
+                        <div className="w-12 h-12 bg-[#010205] rounded-[8px] flex items-center justify-center mx-auto mb-4">
+                          <Icon className="w-6 h-6 text-[#FBFCFF]" />
                         </div>
-                        <h4 className="font-bold text-lg text-uatp-navy mb-2">
+                        <h4 className="font-bold text-base text-[#010205] mb-2 font-barlow uppercase tracking-wide">
                           {tool.name}
                         </h4>
-                        <p className="text-sm text-gray-600">{tool.description}</p>
+                        <p className="text-sm text-[#535457] leading-relaxed">{tool.description}</p>
                       </div>
                     </CardContent>
                   </Card>

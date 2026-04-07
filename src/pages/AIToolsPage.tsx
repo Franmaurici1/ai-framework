@@ -42,7 +42,7 @@ const featuredTools: AITool[] = [
     name: 'ChatGPT Enterprise',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg',
     description: 'OpenAI\'s enterprise-grade conversational AI platform with enhanced security, privacy controls, and dedicated workspace for organizations.',
-    bestUsedFor: 'General-purpose reasoning, content creation, writing assistance, summarization, and cross-departmental AI assistance. Strong relevance for many departments at UATP.',
+    bestUsedFor: 'General-purpose reasoning, content creation, writing assistance, summarization, and cross-departmental AI assistance. Strong relevance for many departments at Porsche Design.',
     departments: [
       { name: 'Marketing', color: 'bg-purple-100 text-purple-700' },
       { name: 'Development', color: 'bg-blue-100 text-blue-700' },
@@ -64,23 +64,27 @@ const featuredTools: AITool[] = [
     pricingUrl: 'https://chatgpt.com/pricing/',
   },
   {
-    name: 'Claude Code',
+    name: 'Claude + Code + Cowork',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Claude_AI_logo.svg',
-    description: 'Specialized AI coding assistant bundled with Claude Premium (It includes Claude!), tailored for development teams with advanced code generation and architecture capabilities.',
-    bestUsedFor: 'Code generation, refactoring, architecture design, technical documentation, and development workflow automation. Very relevant for UATP\'s engineering teams.',
+    description: 'The complete Anthropic suite combining Claude (AI assistant), Claude Code (agentic coding CLI), and collaborative workflows — giving teams a unified AI platform for both knowledge work and software development.',
+    bestUsedFor: 'End-to-end AI-powered workflows: from business analysis and document automation to full codebase generation, PR automation, CI/CD pipelines, and multi-agent task orchestration. Ideal for Porsche Design teams that want one platform covering both conversational AI and autonomous software development.',
     departments: [
       { name: 'Engineering', color: 'bg-indigo-100 text-indigo-700' },
       { name: 'Development', color: 'bg-blue-100 text-blue-700' },
       { name: 'DevOps', color: 'bg-cyan-100 text-cyan-700' },
       { name: 'Architecture', color: 'bg-slate-100 text-slate-700' },
+      { name: 'Operations', color: 'bg-teal-100 text-teal-700' },
+      { name: 'Product', color: 'bg-orange-100 text-orange-700' },
     ],
-    enterprisePrice: '~$150/user/month',
+    enterprisePrice: '$25–$200/user/month',
     features: [
-      'Bundled with Claude Premium seats',
-      'Enterprise: Custom pricing',
-      'Advanced code generation & refactoring',
-      'Architecture and system design assistance',
-      'Codebase analysis and optimization',
+      'Plans from $25/user/month (Pro) to $200/user/month (Enterprise)',
+      'Claude Code: agentic CLI that autonomously writes, tests & ships code',
+      'Multi-agent automation — orchestrate parallel AI tasks end-to-end',
+      'CI/CD & GitHub Actions integration for automated PR workflows',
+      'Custom automation pipelines with MCP tool integrations',
+      'Shared team projects, prompts & workflow templates (Cowork)',
+      'Enterprise SSO, audit logs & data privacy controls',
     ],
     icon: Terminal,
     gradient: 'from-orange-600 to-amber-700',
@@ -94,7 +98,7 @@ const aiTools: AITool[] = [
     name: 'Microsoft 365 Copilot',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
     description: 'AI-powered assistant deeply integrated across Microsoft 365 apps including Outlook, Teams, Excel, Word, and PowerPoint.',
-    bestUsedFor: 'Email drafting, meeting summaries, Excel data analysis, document creation, and Teams collaboration. Perfect for UATP since they use Outlook, Teams, and the Microsoft ecosystem.',
+    bestUsedFor: 'Email drafting, meeting summaries, Excel data analysis, document creation, and Teams collaboration. Perfect for organizations using Outlook, Teams, and the Microsoft ecosystem.',
     departments: [
       { name: 'All Departments', color: 'bg-slate-100 text-slate-700' },
       { name: 'Operations', color: 'bg-teal-100 text-teal-700' },
@@ -118,7 +122,7 @@ const aiTools: AITool[] = [
     name: 'Claude',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Claude_AI_logo.svg',
     description: 'Anthropic\'s advanced AI assistant with exceptional long-document reasoning, code assistance, and internal agent capabilities.',
-    bestUsedFor: 'Long-document analysis, legal review, code assistance, research synthesis, and building internal AI agents. Excellent for development and documentation analysis at UATP.',
+    bestUsedFor: 'Long-document analysis, legal review, code assistance, research synthesis, and building internal AI agents. Excellent for development and documentation analysis.',
     departments: [
       { name: 'Legal', color: 'bg-red-100 text-red-700' },
       { name: 'Development', color: 'bg-blue-100 text-blue-700' },
@@ -166,7 +170,7 @@ const aiTools: AITool[] = [
     name: 'Confluence Cloud + AI',
     logoUrl: 'https://wac-cdn.atlassian.com/misc-assets/confluence-logo.svg',
     description: 'Atlassian\'s knowledge base and documentation platform enhanced with AI features for intelligent content creation and organization.',
-    bestUsedFor: 'Internal knowledge base, documentation platform, team collaboration, and content organization. Essential if UATP already uses Confluence for documentation.',
+    bestUsedFor: 'Internal knowledge base, documentation platform, team collaboration, and content organization. Essential for documentation-heavy organizations.',
     departments: [
       { name: 'All Departments', color: 'bg-slate-100 text-slate-700' },
       { name: 'Product', color: 'bg-orange-100 text-orange-700' },
@@ -190,7 +194,7 @@ const aiTools: AITool[] = [
     name: 'Supademo',
     logoUrl: 'https://avatars.githubusercontent.com/u/95662801',
     description: 'AI-powered demo creation platform for building interactive product walkthroughs, tutorials, and onboarding experiences.',
-    bestUsedFor: 'Demo creation, marketing materials, product onboarding, internal training, and customer education. Useful for selling UATP\'s products and internal training programs.',
+    bestUsedFor: 'Demo creation, marketing materials, product onboarding, internal training, and customer education. Useful for product sales enablement and internal training programs.',
     departments: [
       { name: 'Marketing', color: 'bg-purple-100 text-purple-700' },
       { name: 'Sales', color: 'bg-pink-100 text-pink-700' },
@@ -214,7 +218,7 @@ const aiTools: AITool[] = [
     name: 'Cursor',
     logoUrl: 'https://avatars.githubusercontent.com/u/142287834',
     description: 'Full AI-powered coding environment with multi-model support (GPT, Claude) designed for modern development teams and workflows.',
-    bestUsedFor: 'Complete AI coding environment, multi-model development assistance, code generation, and team collaboration. Perfect for multi-vendor dev teams',
+    bestUsedFor: 'Complete AI coding environment, multi-model development assistance, code generation, and team collaboration. Perfect for multi-vendor development teams.',
     departments: [
       { name: 'Engineering', color: 'bg-indigo-100 text-indigo-700' },
       { name: 'Development', color: 'bg-blue-100 text-blue-700' },
@@ -237,7 +241,7 @@ const aiTools: AITool[] = [
     name: 'Figma + Figma AI',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
     description: 'Leading UI/UX design platform enhanced with AI-driven prototype generation, design suggestions, and rapid iteration capabilities.',
-    bestUsedFor: 'UI/UX design, AI-driven prototype generation, design systems, and rapid prototyping. Essential for Stage 2 rapid prototyping of internal tools at UATP.',
+    bestUsedFor: 'UI/UX design, AI-driven prototype generation, design systems, and rapid prototyping. Essential for Stage 2 rapid prototyping of internal tools.',
     departments: [
       { name: 'Design', color: 'bg-fuchsia-100 text-fuchsia-700' },
       { name: 'Product', color: 'bg-orange-100 text-orange-700' },
@@ -260,7 +264,7 @@ const aiTools: AITool[] = [
     name: 'Midjourney',
     logoUrl: 'https://seeklogo.com/images/M/midjourney-logo-80B25EB563-seeklogo.com.png',
     description: 'Advanced AI-driven image generation platform for creating high-quality visuals, marketing materials, and presentation graphics.',
-    bestUsedFor: 'AI image generation for marketing campaigns, presentations, internal dashboards, and visual content. Adds professional visual quality to UATP\'s internal and external materials.',
+    bestUsedFor: 'AI image generation for marketing campaigns, presentations, internal dashboards, and visual content. Adds professional visual quality to internal and external materials.',
     departments: [
       { name: 'Marketing', color: 'bg-purple-100 text-purple-700' },
       { name: 'Design', color: 'bg-fuchsia-100 text-fuchsia-700' },
@@ -286,9 +290,9 @@ export function AIToolsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-uatp-navy via-uatp-navy-light to-uatp-teal pt-20">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6bTAgMjBjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptLTIwIDRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#0E0E12] pt-20">
+        {/* Subtle grid */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(#FBFCFF 1px, transparent 1px), linear-gradient(90deg, #FBFCFF 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -298,15 +302,15 @@ export function AIToolsPage() {
             className="text-center text-white max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Sparkles className="w-12 h-12 text-uatp-teal" />
-              <h1 className="text-5xl lg:text-6xl font-bold">
+              <Sparkles className="w-10 h-10 text-[#EBD698]" />
+              <h1 className="text-5xl lg:text-6xl font-bold font-barlow uppercase tracking-wide">
                 AI Tools
               </h1>
             </div>
-            <p className="text-xl lg:text-2xl text-gray-100 mb-4 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-[#AFB0B3] mb-4 leading-relaxed">
               Empower your teams with enterprise-grade AI solutions
             </p>
-            <p className="text-lg text-gray-200">
+            <p className="text-base text-[#88898C]">
               Discover the best AI tools for your organization, with detailed information about features, departments, and enterprise pricing.
             </p>
           </motion.div>
@@ -322,15 +326,15 @@ export function AIToolsPage() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2"
+            className="w-5 h-8 border border-[#404044] rounded-full flex justify-center pt-1.5"
           >
-            <div className="w-1 h-3 bg-white/70 rounded-full"></div>
+            <div className="w-0.5 h-2 bg-[#88898C] rounded-full"></div>
           </motion.div>
         </motion.div>
       </section>
 
       {/* Tools Grid Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-[1600px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -339,10 +343,10 @@ export function AIToolsPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-6 font-barlow uppercase tracking-wide">
               Enterprise AI Tools Comparison
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-[#535457] max-w-3xl mx-auto">
               Compare features, pricing, and capabilities to choose the right tools for your organization.
             </p>
           </motion.div>
@@ -357,7 +361,7 @@ export function AIToolsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-10 h-full hover:shadow-2xl transition-all duration-300 border-2 border-uatp-teal/30 hover:border-uatp-teal bg-gradient-to-br from-white to-gray-50 flex flex-col">
+                <Card className="p-10 h-full hover:shadow-2xl transition-all duration-300 border border-[#D8D8DB] hover:border-[#010205] bg-gradient-to-br from-white to-gray-50 flex flex-col">
                   {/* Tool Header */}
                   <div className="flex items-start gap-6 mb-6">
                     {/* Logo */}
@@ -380,15 +384,15 @@ export function AIToolsPage() {
 
                     {/* Tool Info */}
                     <div className="flex-1">
-                      <div className="inline-block px-3 py-1 bg-uatp-teal/10 text-uatp-teal rounded-full text-xs font-semibold mb-2">
+                      <div className="inline-block px-3 py-1 bg-[#010205]/5 text-[#010205] rounded-[4px] text-xs font-semibold mb-2 tracking-widest">
                         FEATURED
                       </div>
-                      <h3 className="text-3xl font-bold text-uatp-navy mb-2">
+                      <h3 className="text-3xl font-bold text-[#010205] mb-2 font-barlow uppercase tracking-wide">
                         {tool.name}
                       </h3>
                       <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                         <Briefcase className="w-4 h-4" />
-                        <span className="font-semibold text-uatp-teal text-lg">
+                        <span className="font-semibold text-[#010205] text-lg">
                           {tool.enterprisePrice}
                         </span>
                       </div>
@@ -403,8 +407,8 @@ export function AIToolsPage() {
                   {/* Best Used For */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Zap className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Best Used For</h4>
+                      <Zap className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Best Used For</h4>
                     </div>
                     <p className="text-gray-600 leading-relaxed pl-7">
                       {tool.bestUsedFor}
@@ -414,8 +418,8 @@ export function AIToolsPage() {
                   {/* Departments */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Users className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Departments</h4>
+                      <Users className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Departments</h4>
                     </div>
                     <div className="flex flex-wrap gap-2 pl-7">
                       {tool.departments.map((dept) => (
@@ -432,13 +436,13 @@ export function AIToolsPage() {
                   {/* Enterprise Features */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Shield className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Enterprise Features</h4>
+                      <Shield className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Enterprise Features</h4>
                     </div>
                     <ul className="space-y-2 pl-7">
                       {tool.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 rounded-full bg-uatp-teal mt-1.5 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#010205] mt-1.5 flex-shrink-0"></div>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -451,7 +455,7 @@ export function AIToolsPage() {
                       href={tool.pricingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border-2 border-uatp-teal text-uatp-teal hover:bg-uatp-teal/5 font-medium rounded-lg transition-all duration-200"
+                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border border-[#D8D8DB] text-[#010205] hover:bg-[#EEEFF2] font-medium rounded-[4px] transition-all duration-250"
                     >
                       Learn more
                       <ExternalLink className="w-4 h-4" />
@@ -472,7 +476,7 @@ export function AIToolsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-uatp-teal flex flex-col">
+                <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 border border-[#D8D8DB] hover:border-[#010205] flex flex-col">
                   {/* Tool Header */}
                   <div className="flex items-start gap-4 mb-5">
                     {/* Logo */}
@@ -496,12 +500,12 @@ export function AIToolsPage() {
 
                     {/* Tool Info */}
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-uatp-navy mb-2">
+                      <h3 className="text-xl font-bold text-[#010205] mb-2 font-barlow uppercase tracking-wide">
                         {tool.name}
                       </h3>
                       <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
                         <Briefcase className="w-4 h-4" />
-                        <span className="font-semibold text-uatp-teal">
+                        <span className="font-semibold text-[#010205]">
                           {tool.enterprisePrice}
                         </span>
                       </div>
@@ -516,8 +520,8 @@ export function AIToolsPage() {
                   {/* Best Used For */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Zap className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Best Used For</h4>
+                      <Zap className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Best Used For</h4>
                     </div>
                     <p className="text-gray-600 leading-relaxed pl-7">
                       {tool.bestUsedFor}
@@ -527,8 +531,8 @@ export function AIToolsPage() {
                   {/* Departments */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Users className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Departments</h4>
+                      <Users className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Departments</h4>
                     </div>
                     <div className="flex flex-wrap gap-2 pl-7">
                       {tool.departments.map((dept) => (
@@ -545,13 +549,13 @@ export function AIToolsPage() {
                   {/* Enterprise Features */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Shield className="w-5 h-5 text-uatp-teal" />
-                      <h4 className="font-semibold text-uatp-navy">Enterprise Features</h4>
+                      <Shield className="w-5 h-5 text-[#010205]" />
+                      <h4 className="font-semibold text-[#010205]">Enterprise Features</h4>
                     </div>
                     <ul className="space-y-2 pl-7">
                       {tool.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 rounded-full bg-uatp-teal mt-1.5 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#010205] mt-1.5 flex-shrink-0"></div>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -564,7 +568,7 @@ export function AIToolsPage() {
                       href={tool.pricingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border-2 border-uatp-teal text-uatp-teal hover:bg-uatp-teal/5 font-medium rounded-lg transition-all duration-200"
+                      className="flex items-center justify-center gap-2 w-full px-4 py-2 border border-[#D8D8DB] text-[#010205] hover:bg-[#EEEFF2] font-medium rounded-[4px] transition-all duration-250"
                     >
                       Learn more
                       <ExternalLink className="w-4 h-4" />

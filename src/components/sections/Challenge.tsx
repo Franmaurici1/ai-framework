@@ -11,7 +11,7 @@ const iconMap = {
 
 export function Challenge() {
   return (
-    <section id="challenge" className="py-24 bg-gray-50">
+    <section id="challenge" className="py-24 bg-[#EEEFF2]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -21,11 +21,11 @@ export function Challenge() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-4 font-barlow uppercase tracking-wide">
             The Three-Step Methodology Driving AI Success
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            For each stage, we <span className="font-semibold text-uatp-teal">Assess</span> high-impact opportunities, <span className="font-semibold text-uatp-teal">Plan</span> strategic implementation paths, and <span className="font-semibold text-uatp-teal">Execute</span> to deliver measurable ROI—ensuring every AI investment creates real business value
+          <p className="text-lg text-[#535457] max-w-3xl mx-auto">
+            For each stage, we <span className="font-semibold text-[#010205]">Assess</span> high-impact opportunities, <span className="font-semibold text-[#010205]">Plan</span> strategic implementation paths, and <span className="font-semibold text-[#010205]">Execute</span> to deliver measurable ROI—ensuring every AI investment creates real business value
           </p>
         </motion.div>
 
@@ -40,24 +40,23 @@ export function Challenge() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
               >
-                <Card className="h-full hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-uatp-teal">
+                <Card className="h-full border border-[#D8D8DB] border-l-4 border-l-[#010205] bg-white shadow-none rounded-[8px] hover:bg-[#EEEFF2] transition-colors duration-250">
                   <CardHeader>
-                    <div className="w-14 h-14 bg-gradient-to-br from-uatp-teal to-uatp-green rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-7 h-7 text-white" />
+                    <div className="w-12 h-12 bg-[#010205] rounded-[4px] flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[#FBFCFF]" />
                     </div>
-                    <CardTitle className="text-2xl text-uatp-navy">
+                    <CardTitle className="text-xl text-[#010205] font-barlow uppercase tracking-wide">
                       {challenge.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 mb-4">{challenge.description}</p>
+                    <p className="text-[#535457] mb-4 text-sm leading-relaxed">{challenge.description}</p>
                     <ul className="space-y-2">
                       {challenge.bullets.map((bullet, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-uatp-teal mr-2 mt-1">•</span>
-                          <span className="text-sm text-gray-700">{bullet}</span>
+                          <span className="text-[#EBD698] mr-2 mt-1 font-bold">—</span>
+                          <span className="text-sm text-[#535457]">{bullet}</span>
                         </li>
                       ))}
                     </ul>

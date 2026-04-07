@@ -19,7 +19,7 @@ const nextStepItems = [
 
 export function NextSteps() {
   return (
-    <section id="next-steps" className="py-24 bg-gradient-to-br from-white via-gray-50 to-white">
+    <section id="next-steps" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -29,10 +29,10 @@ export function NextSteps() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-uatp-navy mb-4">
-            Next Steps with UATP
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#010205] mb-4 font-barlow uppercase tracking-wide">
+            Next Steps
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-[#535457] max-w-3xl mx-auto">
             Let's collaborate to create a customized AI adoption roadmap tailored to your needs
           </p>
         </motion.div>
@@ -55,14 +55,14 @@ export function NextSteps() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-uatp-teal to-uatp-green rounded-full flex items-center justify-center mr-4">
-                    <CheckCircle2 className="w-6 h-6 text-white" />
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#010205] rounded-[4px] flex items-center justify-center mr-4">
+                    <CheckCircle2 className="w-5 h-5 text-[#FBFCFF]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-uatp-navy mb-2">
+                    <h3 className="text-lg font-semibold text-[#010205] mb-1 font-barlow uppercase tracking-wide">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-[#535457] text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -76,50 +76,54 @@ export function NextSteps() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="overflow-hidden hover:shadow-2xl transition-shadow duration-300 bg-gradient-to-br from-uatp-navy to-uatp-navy-light">
+            <Card className="overflow-hidden bg-[#0E0E12] border border-[#404044] rounded-[12px] shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  {/* Three step visual */}
                   {[
-                    { icon: Users, label: 'Discover', color: 'from-blue-500 to-blue-600', delay: 0.2 },
-                    { icon: Target, label: 'Prioritize', color: 'from-teal-500 to-teal-600', delay: 0.4 },
-                    { icon: Rocket, label: 'Implement', color: 'from-green-500 to-green-600', delay: 0.6 },
+                    { icon: Users, label: 'Discover', delay: 0.2 },
+                    { icon: Target, label: 'Prioritize', delay: 0.4, isHighlight: true },
+                    { icon: Rocket, label: 'Implement', delay: 0.6 },
                   ].map((step, index) => (
                     <motion.div
                       key={index}
                       initial={{ x: -20, opacity: 0 }}
                       whileInView={{ x: 0, opacity: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: step.delay, duration: 0.5 }}
+                      transition={{ delay: step.delay, duration: 0.4 }}
                       className="flex items-center space-x-4"
                     >
-                      <div className={`flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
-                        <step.icon className="w-8 h-8 text-white" />
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-[8px] flex items-center justify-center border ${
+                        step.isHighlight
+                          ? 'bg-[#EBD698]/10 border-[#EBD698]/40'
+                          : 'bg-[#212225] border-[#404044]'
+                      }`}>
+                        <step.icon className={`w-6 h-6 ${step.isHighlight ? 'text-[#EBD698]' : 'text-[#AFB0B3]'}`} />
                       </div>
                       <div className="flex-1">
-                        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div className="h-px bg-[#404044] overflow-hidden mb-2">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: '100%' }}
                             viewport={{ once: true }}
                             transition={{ delay: step.delay + 0.2, duration: 0.8 }}
-                            className={`h-full bg-gradient-to-r ${step.color}`}
+                            className={`h-full ${step.isHighlight ? 'bg-[#EBD698]' : 'bg-[#FBFCFF]'}`}
                           />
                         </div>
-                        <p className="text-white font-semibold mt-2">{step.label}</p>
+                        <p className={`font-semibold text-sm font-barlow uppercase tracking-widest ${
+                          step.isHighlight ? 'text-[#EBD698]' : 'text-[#FBFCFF]'
+                        }`}>{step.label}</p>
                       </div>
                     </motion.div>
                   ))}
 
-                  {/* Bottom tagline */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 1, duration: 0.5 }}
-                    className="pt-4 border-t border-white/10 text-center"
+                    className="pt-4 border-t border-[#404044] text-center"
                   >
-                    <p className="text-gray-300 text-sm">Your roadmap to AI transformation</p>
+                    <p className="text-[#88898C] text-xs uppercase tracking-widest">Your roadmap to AI transformation</p>
                   </motion.div>
                 </div>
               </CardContent>
@@ -127,7 +131,7 @@ export function NextSteps() {
           </motion.div>
         </div>
 
-        {/* Bottom Stats/Badges */}
+        {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,9 +144,9 @@ export function NextSteps() {
             { stat: '20+', label: 'AI Tools Evaluated' },
             { stat: 'ROI-Driven', label: 'Measurable Outcomes' },
           ].map((item, index) => (
-            <Card key={index} className="text-center p-6 bg-gradient-to-br from-white to-gray-50 hover:shadow-lg transition-shadow">
-              <p className="text-3xl font-bold text-uatp-teal mb-2">{item.stat}</p>
-              <p className="text-gray-600">{item.label}</p>
+            <Card key={index} className="text-center p-6 border border-[#D8D8DB] bg-white rounded-[8px] shadow-none hover:bg-[#EEEFF2] transition-colors duration-250">
+              <p className="text-3xl font-bold text-[#010205] mb-2 font-barlow uppercase">{item.stat}</p>
+              <p className="text-[#535457] text-sm">{item.label}</p>
             </Card>
           ))}
         </motion.div>

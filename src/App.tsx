@@ -22,7 +22,7 @@ function App() {
             </Routes>
           </main>
           <Author />
-          <footer className="bg-uatp-navy text-white py-8">
+          <footer className="bg-[#0E0E12] text-white py-8">
             <div className="container mx-auto px-4 text-center">
               <p className="text-gray-300">
                 &copy; {new Date().getFullYear()} Distillery. All rights reserved.
